@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>nurunala — Memoar Pernikahan oleh Azhar & Vidia</title>
+<meta name="description" content="Pre-order memoar pernikahan Azhar Nurunala & Vidia Nuarista. Dua buku, satu perjalanan. Gratis ongkir seluruh Indonesia." />
+<meta name="theme-color" content="#f6f3ec" />
+
+<!-- Open Graph (Facebook, WhatsApp, Instagram) -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://nurunala.blog/" />
+<meta property="og:title" content="nurunala × nuarista — Memoar Pernikahan" />
+<meta property="og:description" content="Setiap pernikahan punya cerita. Dan inilah kisah kami, apa adanya. Pre-order dibuka." />
+<meta property="og:image" content="https://nurunala.blog/covers/belajar-mencintai.png" />
+<meta property="og:locale" content="id_ID" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="nurunala × nuarista — Memoar Pernikahan" />
+<meta name="twitter:description" content="Pre-order dua memoar pernikahan oleh Azhar & Vidia. Gratis ongkir seluruh Indonesia." />
+<meta name="twitter:image" content="https://nurunala.blog/covers/belajar-mencintai.png" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23dd5a23'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-style='italic' font-size='22' font-weight='500' text-anchor='middle' fill='%23fffaf0'%3En%3C/text%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+/* ---------- tokens ---------- */
+:root{
+  --serif: "Crimson Pro", Georgia, serif;
+  --sans: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+
+  --bg:#f6f3ec;
+  --paper:#ffffff;
+  --ink:#1c1916;
+  --ink-2:#4a4640;
+  --muted:#8a8175;
+  --line:#e8e2d3;
+  --line-soft:#f0ebde;
+
+  --accent:#dd5a23;
+  --accent-deep:#b94715;
+  --accent-pale:#fce6d0;
+  --blue:#4b6c91;
+  --blue-pale:#e2e9f1;
+  --green:#5d7a47;
+  --green-pale:#e9efde;
+
+  --maxw: 440px;
+}
+
+/* Linen — kraft paper */
+html[data-palette="linen"]{
+  --bg:#ece1c7;
+  --paper:#f5ebd2;
+  --ink:#2b211a;
+  --ink-2:#4d3f33;
+  --muted:#8c7d68;
+  --line:#d7c4a3;
+  --line-soft:#e3d3b3;
+  --accent:#a8612a;
+  --accent-deep:#7a4515;
+  --accent-pale:#e6d2b0;
+  --blue:#475f7d;
+  --blue-pale:#d6deea;
+}
+/* Twilight — candlelit dark */
+html[data-palette="twilight"]{
+  --bg:#181410;
+  --paper:#221c16;
+  --ink:#f1e2c4;
+  --ink-2:#cab99a;
+  --muted:#8c7f6a;
+  --line:#34291f;
+  --line-soft:#2a221a;
+  --accent:#e8884e;
+  --accent-deep:#c66a2f;
+  --accent-pale:#2e2218;
+  --blue:#7d9bbf;
+  --blue-pale:#1f262e;
+  --green:#9bb585;
+  --green-pale:#1f2622;
+}
+
+html[data-font="classic"]{ --serif:"EB Garamond", Georgia, serif; }
+html[data-font="modern"]{ --serif:"DM Serif Display", Georgia, serif; }
+
+/* ---------- base ---------- */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:var(--bg);color:var(--ink)}
+body{
+  font-family:var(--sans);
+  font-size:15px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  padding-bottom:84px;
+  min-height:100vh;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px}
+
+.eyebrow{
+  font-family:var(--sans);
+  font-size:10.5px;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:var(--muted);
+  font-weight:600;
+}
+
+/* ---------- topbar ---------- */
+.topbar{
+  position:sticky; top:0; z-index:40;
+  background:color-mix(in oklab, var(--bg) 92%, transparent);
+  backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line-soft);
+}
+.topbar .row{
+  display:flex; align-items:center; justify-content:center;
+  padding:14px 24px;
+  position:relative;
+}
+.brand{
+  font-family:var(--serif); font-style:italic; font-weight:500;
+  font-size:20px; letter-spacing:.02em;
+  color:var(--accent);
+  text-decoration:none;
+}
+.brand .dot{display:inline-block; width:5px; height:5px; background:var(--accent); border-radius:50%; margin:0 4px 3px 4px; vertical-align:middle}
+.brand .x{display:inline-block; color:var(--muted); font-style:normal; margin:0 4px; font-weight:400}
+
+/* ---------- hero ---------- */
+.hero{padding:52px 0 28px; text-align:center}
+.hero .eyebrow{margin-bottom:20px}
+.hero h1{
+  font-family:var(--serif); font-weight:500;
+  font-size:32px; line-height:1.18;
+  letter-spacing:-.01em;
+  color:var(--ink);
+  text-wrap:balance;
+  margin-bottom:16px;
+}
+.hero h1 em{font-style:italic; color:var(--accent); font-weight:500}
+.hero p.lede{
+  font-family:var(--sans);
+  font-size:14.5px; line-height:1.75;
+  color:var(--ink-2);
+  max-width:34ch;
+  margin:0 auto;
+  text-wrap:pretty;
+}
+.hero .by{
+  font-family:var(--serif); font-style:italic;
+  font-size:14.5px; color:var(--muted);
+  margin-top:22px;
+  letter-spacing:.01em;
+}
+.hero .by strong{color:var(--ink-2); font-weight:500}
+.divider-orn{
+  display:flex; align-items:center; justify-content:center; gap:10px;
+  margin:22px auto 0;
+}
+.divider-orn::before, .divider-orn::after{
+  content:""; height:1px; width:32px; background:var(--line);
+}
+.divider-orn .star{color:var(--accent); font-size:11px; opacity:.7}
+
+/* ---------- preorder strip ---------- */
+.po-strip{
+  margin:0 auto;
+  text-align:center;
+  padding:8px 24px 32px;
+}
+.po-pill{
+  display:inline-flex; align-items:center; gap:10px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:8px 16px;
+  font-family:var(--sans); font-size:12.5px;
+  color:var(--ink-2);
+  letter-spacing:.02em;
+}
+.po-pill .pulse{
+  width:7px; height:7px; border-radius:50%; background:var(--accent);
+  box-shadow:0 0 0 4px var(--accent-pale);
+  animation:pulse 2.2s infinite;
+}
+@keyframes pulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(221,90,35,.4)}
+  50%{box-shadow:0 0 0 7px rgba(221,90,35,0)}
+}
+.po-pill em{color:var(--accent); font-style:normal; font-weight:600}
+
+/* ---------- sections ---------- */
+section{padding:32px 0}
+.s-head{text-align:center; margin-bottom:22px}
+.s-head .eyebrow{margin-bottom:10px}
+.s-head h2{
+  font-family:var(--serif); font-weight:500;
+  font-size:24px; line-height:1.25; color:var(--ink);
+  letter-spacing:-.01em;
+  text-wrap:balance;
+}
+.s-head h2 em{color:var(--accent); font-style:italic}
+
+/* ---------- book card ---------- */
+.book{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:20px;
+  margin-bottom:14px;
+}
+.book-cover{
+  width:100%; aspect-ratio:13/19;
+  border-radius:6px;
+  overflow:hidden;
+  margin-bottom:16px;
+  border:1px solid var(--line);
+  background:var(--bg);
+  box-shadow:0 6px 18px rgba(31,42,51,.10);
+}
+.book-cover img{width:100%; height:100%; object-fit:cover; display:block}
+
+.book-tags{display:flex; gap:8px; margin-bottom:10px; flex-wrap:wrap}
+.tag{
+  font-family:var(--sans);
+  font-size:9.5px; letter-spacing:.18em; text-transform:uppercase;
+  padding:4px 9px; border-radius:999px;
+  color:var(--accent); background:var(--accent-pale);
+  font-weight:600;
+}
+.tag.blue{color:var(--blue); background:var(--blue-pale)}
+.tag.muted{color:var(--muted); background:transparent; border:1px solid var(--line)}
+
+.book h3{
+  font-family:var(--serif); font-weight:500;
+  font-size:22px; line-height:1.22;
+  color:var(--ink);
+  letter-spacing:-.005em;
+  margin-bottom:4px;
+  text-wrap:balance;
+}
+.book .meta{
+  font-family:var(--sans); font-size:11.5px;
+  color:var(--muted); letter-spacing:.02em;
+  margin-bottom:12px;
+}
+.book .desc{
+  font-family:var(--sans); font-size:13.5px;
+  color:var(--ink-2); line-height:1.7;
+  margin-bottom:16px;
+}
+.book .footer{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:12px; flex-wrap:wrap;
+  padding-top:14px;
+  border-top:1px solid var(--line-soft);
+}
+.price{display:flex; flex-direction:column}
+.price .pre{
+  font-family:var(--sans); font-size:9.5px;
+  letter-spacing:.18em; text-transform:uppercase;
+  color:var(--muted); font-weight:600;
+  margin-bottom:1px;
+}
+.price .amt{font-family:var(--serif); font-size:22px; color:var(--ink); line-height:1}
+.price .ship-line{
+  font-family:var(--serif); font-style:italic;
+  font-size:12.5px; color:var(--accent);
+  margin-top:3px; letter-spacing:.01em;
+}
+
+/* buttons */
+.btn{
+  font-family:var(--sans); font-size:13px;
+  border-radius:9px;
+  padding:10px 14px;
+  text-decoration:none;
+  display:inline-flex; align-items:center; justify-content:center; gap:6px;
+  border:1px solid transparent;
+  font-weight:500;
+  transition:background .15s, color .15s, border-color .15s, box-shadow .15s;
+  white-space:nowrap;
+}
+.btn-ghost{color:var(--accent); border-color:var(--accent)}
+.btn-ghost:hover{background:var(--accent-pale)}
+.btn-primary{background:var(--accent); color:#fff}
+.btn-primary:hover{background:var(--accent-deep)}
+.btn-dark{background:var(--ink); color:var(--bg); border-color:var(--ink)}
+.btn-block{display:flex; width:100%; padding:13px}
+
+.btn-group{display:flex; gap:8px}
+
+/* ---------- bundle ---------- */
+.bundle{
+  background:var(--paper);
+  border:1.5px solid var(--accent);
+  border-radius:16px;
+  padding:24px 22px;
+  position:relative;
+  margin-top:20px;
+  box-shadow:0 6px 22px rgba(221,90,35,.10);
+}
+.bundle-ribbon{
+  position:absolute; top:-11px; left:50%; transform:translateX(-50%);
+  background:var(--accent); color:#fff;
+  font-family:var(--sans); font-size:10px;
+  letter-spacing:.22em; text-transform:uppercase;
+  padding:4px 14px; border-radius:999px;
+  font-weight:700; white-space:nowrap;
+}
+.bundle-covers{
+  display:grid; grid-template-columns:1fr 1fr; gap:10px;
+  margin-bottom:18px;
+}
+.bundle-covers .book-cover{margin-bottom:0; transform:rotate(-1.2deg)}
+.bundle-covers .book-cover:last-child{transform:rotate(1.2deg)}
+.bundle h3{
+  font-family:var(--serif); font-weight:500;
+  font-size:20px; line-height:1.25; color:var(--ink);
+  text-wrap:balance;
+  margin-bottom:8px;
+  text-align:center;
+}
+.bundle h3 em{color:var(--accent); font-style:italic}
+.bundle .desc{
+  font-family:var(--sans); font-size:13px;
+  color:var(--ink-2); line-height:1.7;
+  text-align:center;
+  margin-bottom:14px;
+}
+.bp-row{
+  display:flex; align-items:baseline; justify-content:center;
+  gap:10px; flex-wrap:wrap;
+  margin-bottom:4px;
+}
+.bp-strike{font-family:var(--sans); font-size:13px; color:var(--muted); text-decoration:line-through}
+.bp-main{font-family:var(--serif); font-size:26px; color:var(--accent); line-height:1}
+.bp-save{
+  font-family:var(--sans); font-size:10px; font-weight:600;
+  background:var(--green-pale); color:var(--green);
+  padding:3px 9px; border-radius:999px; letter-spacing:.06em;
+}
+.bp-micro{
+  font-family:var(--serif); font-style:italic; font-size:13px;
+  color:var(--muted); text-align:center;
+  margin:6px 0 18px;
+}
+.bp-foot{
+  display:flex; align-items:center; justify-content:center;
+  gap:10px; flex-wrap:wrap;
+  margin:8px 0 18px;
+}
+.bp-foot .bp-micro{margin:0}
+.bundle-ship{
+  font-family:var(--serif); font-style:italic;
+  font-size:13px; color:var(--accent);
+  text-align:center;
+  margin:0 0 16px;
+  letter-spacing:.01em;
+}
+
+/* ---------- timeline ---------- */
+.t-list{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:20px 20px 4px;
+}
+.t-step{display:flex; gap:14px; padding-bottom:18px; position:relative}
+.t-step:last-child{padding-bottom:6px}
+.t-left{display:flex; flex-direction:column; align-items:center; flex-shrink:0; padding-top:3px}
+.t-dot{width:10px; height:10px; border-radius:50%; background:var(--line); flex-shrink:0}
+.t-dot.active{background:var(--accent); box-shadow:0 0 0 4px var(--accent-pale)}
+.t-line{width:1px; flex:1; background:var(--line); margin-top:4px}
+.t-step:last-child .t-line{display:none}
+.t-body h4{
+  font-family:var(--serif); font-weight:500;
+  font-size:16px; color:var(--ink); margin-bottom:2px;
+}
+.t-step:not(.active) .t-body h4{color:var(--ink-2)}
+.t-body .date{
+  font-family:var(--sans); font-size:11.5px; font-weight:600;
+  letter-spacing:.04em; color:var(--accent);
+  margin-bottom:4px;
+}
+.t-step:not(.active) .t-body .date{color:var(--muted)}
+.t-body p{
+  font-family:var(--sans); font-size:12.5px;
+  color:var(--muted); line-height:1.6;
+}
+
+/* ---------- FAQ ---------- */
+.faq-item{
+  border-bottom:1px solid var(--line-soft);
+}
+.faq-item:first-child{border-top:1px solid var(--line-soft)}
+.faq-q{
+  width:100%;
+  padding:16px 0;
+  text-align:left;
+  font-family:var(--sans); font-size:14px; font-weight:500; color:var(--ink);
+  display:flex; justify-content:space-between; align-items:center; gap:14px;
+}
+.faq-q .ic{
+  flex-shrink:0; width:22px; height:22px;
+  border-radius:50%;
+  background:var(--accent-pale); color:var(--accent);
+  display:flex; align-items:center; justify-content:center;
+  font-size:13px; line-height:1; transition:transform .25s;
+  font-weight:400;
+}
+.faq-item.open .ic{transform:rotate(45deg)}
+.faq-a{
+  font-family:var(--sans); font-size:13px;
+  color:var(--ink-2); line-height:1.7;
+  max-height:0; overflow:hidden;
+  transition:max-height .3s ease, padding .3s ease;
+}
+.faq-item.open .faq-a{ max-height:300px; padding:0 0 18px }
+
+/* ---------- tracking ---------- */
+.track{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:20px;
+}
+.track h3{
+  font-family:var(--serif); font-weight:500;
+  font-size:18px; color:var(--ink); margin-bottom:4px;
+}
+.track .sub{
+  font-family:var(--sans); font-size:12.5px;
+  color:var(--muted); margin-bottom:16px;
+  line-height:1.6;
+}
+.t-input-row{display:flex; gap:8px; margin-bottom:6px}
+.t-input{
+  flex:1; min-width:0;
+  border:1px solid var(--line); border-radius:9px;
+  padding:11px 13px;
+  font-family:var(--sans); font-size:13.5px;
+  background:var(--bg); color:var(--ink);
+  outline:none; transition:border-color .15s, background .15s;
+}
+.t-input:focus{border-color:var(--accent); background:var(--paper)}
+.t-input::placeholder{color:var(--muted)}
+.t-hint{
+  font-family:var(--serif); font-style:italic;
+  font-size:12px; color:var(--muted);
+  margin-top:6px;
+}
+.t-notfound{
+  font-family:var(--sans); font-size:12.5px;
+  color:#b34334; margin-top:12px;
+  padding:10px 12px;
+  background:color-mix(in oklab, #b34334 8%, var(--paper));
+  border-radius:8px;
+  display:none;
+}
+.t-notfound.show{display:block}
+.t-result{display:none; margin-top:16px; padding-top:16px; border-top:1px dashed var(--line)}
+.t-result.show{display:block}
+.t-result .header{
+  font-family:var(--sans); font-size:12px;
+  color:var(--muted); margin-bottom:12px;
+  letter-spacing:.02em;
+}
+.t-result .header strong{color:var(--ink); font-family:var(--serif); font-size:15px; font-weight:500}
+.t-row{display:flex; gap:12px; padding-bottom:12px}
+.t-row:last-child{padding-bottom:0}
+.t-row .col-l{display:flex; flex-direction:column; align-items:center; flex-shrink:0}
+.dot{width:10px; height:10px; border-radius:50%; flex-shrink:0; margin-top:4px}
+.dot.done{background:var(--green)}
+.dot.active{background:var(--accent); box-shadow:0 0 0 3px var(--accent-pale)}
+.dot.pending{background:var(--line)}
+.t-mini-line{width:1px; flex:1; background:var(--line); min-height:16px; margin:3px 0}
+.t-row .body .label{font-family:var(--sans); font-size:13px; color:var(--ink)}
+.t-row .body .label.pending{color:var(--muted)}
+.t-row .body .time{font-family:var(--sans); font-size:11.5px; color:var(--muted); margin-top:1px}
+
+/* ---------- modal ---------- */
+.modal-overlay{
+  position:fixed; inset:0; z-index:100;
+  background:rgba(20,12,4,.55);
+  backdrop-filter:blur(4px); -webkit-backdrop-filter:blur(4px);
+  display:flex; align-items:flex-end; justify-content:center;
+  opacity:0; pointer-events:none; transition:opacity .25s;
+}
+.modal-overlay.open{opacity:1; pointer-events:auto}
+.modal-sheet{
+  background:var(--paper);
+  width:100%;
+  max-width:var(--maxw);
+  max-height:88vh;
+  overflow-y:auto;
+  padding:24px 24px 32px;
+  border-radius:18px 18px 0 0;
+  transform:translateY(100%);
+  transition:transform .35s cubic-bezier(.4,0,.2,1);
+  position:relative;
+}
+.modal-overlay.open .modal-sheet{transform:translateY(0)}
+.modal-handle{
+  width:38px; height:4px; background:var(--line); border-radius:2px;
+  margin:-8px auto 18px;
+}
+.modal-close{
+  position:absolute; top:14px; right:14px;
+  width:30px; height:30px; border-radius:50%;
+  background:var(--bg); border:1px solid var(--line);
+  font-size:13px; color:var(--ink-2);
+  display:flex; align-items:center; justify-content:center;
+}
+.modal-badge{
+  display:inline-block;
+  font-family:var(--sans); font-size:10px;
+  letter-spacing:.2em; text-transform:uppercase;
+  background:var(--accent-pale); color:var(--accent);
+  padding:4px 11px; border-radius:999px; font-weight:600;
+  margin-bottom:14px;
+}
+.modal-title{
+  font-family:var(--serif); font-weight:500;
+  font-size:24px; line-height:1.2; color:var(--ink);
+  margin-bottom:12px; text-wrap:balance; letter-spacing:-.005em;
+}
+.modal-tagline{
+  font-family:var(--sans); font-size:13.5px;
+  color:var(--ink-2); line-height:1.75;
+  white-space:pre-line;
+  margin-bottom:20px; padding-bottom:20px;
+  border-bottom:1px dashed var(--line);
+}
+.modal-sec{
+  font-family:var(--sans); font-size:10px;
+  letter-spacing:.22em; text-transform:uppercase;
+  color:var(--muted); font-weight:600;
+  margin-bottom:12px;
+}
+.ch-list{list-style:none; margin-bottom:22px}
+.ch-list li{
+  display:flex; align-items:baseline; gap:12px;
+  padding:9px 0;
+  border-bottom:1px solid var(--line-soft);
+}
+.ch-list li:last-child{border-bottom:none}
+.ch-num{
+  font-family:var(--sans); font-size:9.5px; font-weight:600;
+  letter-spacing:.12em; text-transform:uppercase;
+  color:var(--accent); min-width:42px; flex-shrink:0;
+}
+.ch-title{font-family:var(--serif); font-size:14.5px; color:var(--ink); flex:1; line-height:1.4}
+
+/* ---------- sticky cta ---------- */
+.sticky-cta{
+  position:fixed; bottom:0; left:0; right:0;
+  background:color-mix(in oklab, var(--paper) 95%, transparent);
+  backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+  border-top:1px solid var(--line);
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+  z-index:48;
+  display:flex; gap:8px; justify-content:center;
+}
+.sticky-cta .inner{
+  display:flex; gap:8px; width:100%;
+  max-width:var(--maxw);
+}
+.sticky-cta .inner > *{flex:1; padding:13px; font-size:13.5px}
+
+/* payment iframe modal */
+.pay-sheet{
+  max-width:480px;
+  height:92vh;
+  max-height:92vh;
+  padding:0;
+  display:flex; flex-direction:column;
+  overflow:hidden;
+}
+.pay-head{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:12px;
+  padding:12px 14px 12px 18px;
+  border-bottom:1px solid var(--line);
+  background:var(--paper);
+  flex-shrink:0;
+}
+.pay-actions{display:flex; align-items:center; gap:6px}
+.pay-open-tab{
+  font-family:var(--sans); font-size:12px;
+  color:var(--accent); text-decoration:none;
+  font-weight:500;
+  padding:6px 10px;
+  border-radius:7px;
+  transition:background .15s;
+}
+.pay-open-tab:hover{background:var(--accent-pale)}
+.pay-close{position:static !important}
+#payFrame{
+  width:100%; flex:1;
+  border:0;
+  background:var(--bg);
+  min-height:380px;
+}
+
+/* order form */
+.order-form .of-row{margin-bottom:14px}
+.order-form label{
+  display:block;
+  font-family:var(--sans); font-size:10.5px;
+  letter-spacing:.18em; text-transform:uppercase;
+  color:var(--muted); font-weight:600;
+  margin-bottom:6px;
+}
+.order-form input,
+.order-form textarea,
+.order-form select{
+  width:100%;
+  font-family:var(--sans); font-size:14px;
+  color:var(--ink);
+  background:var(--bg);
+  border:1px solid var(--line); border-radius:9px;
+  padding:11px 13px;
+  outline:none;
+  transition:border-color .15s, background .15s, opacity .15s;
+  resize:vertical;
+}
+.order-form select{
+  appearance:none;
+  -webkit-appearance:none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238a7d6e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 9l6 6 6-6'/></svg>");
+  background-repeat:no-repeat;
+  background-position:right 14px center;
+  padding-right:36px;
+  cursor:pointer;
+}
+.order-form select:disabled{opacity:.5; cursor:not-allowed; color:var(--muted)}
+.order-form input::placeholder,
+.order-form textarea::placeholder{color:var(--muted)}
+.order-form input:focus,
+.order-form textarea:focus,
+.order-form select:focus{border-color:var(--accent); background-color:var(--paper)}
+.order-form .of-loading{
+  font-family:var(--serif); font-style:italic;
+  font-size:12px; color:var(--muted);
+  margin-top:5px;
+  display:none;
+}
+.order-form .of-loading.show{display:block}
+.order-form .of-err{
+  font-family:var(--sans); font-size:12px;
+  color:#b34334; margin-top:6px;
+  display:none;
+}
+.order-form .of-err.show{display:block}
+
+/* quick actions */
+.po-note{
+  display:flex; align-items:flex-start; gap:12px;
+  margin:28px 0 14px;
+  padding:14px 16px;
+  background:var(--accent-pale);
+  border:1px solid color-mix(in oklab, var(--accent) 22%, transparent);
+  border-radius:10px;
+}
+.po-note-ic{
+  flex-shrink:0;
+  width:22px; height:22px; border-radius:50%;
+  background:var(--accent); color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--serif); font-style:italic;
+  font-size:13px; line-height:1; font-weight:500;
+  margin-top:1px;
+}
+.po-note p{
+  font-family:var(--sans); font-size:13px;
+  color:var(--ink); line-height:1.6;
+  margin:0;
+}
+.po-note strong{font-weight:600}
+.qa-grid{
+  display:flex; flex-direction:column; gap:10px;
+  margin:20px 0 0;
+}
+.qa-card{
+  display:flex; align-items:center; gap:14px;
+  width:100%;
+  padding:14px 16px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:12px;
+  text-align:left;
+  text-decoration:none;
+  color:inherit;
+  cursor:pointer;
+  transition:border-color .15s, transform .15s, box-shadow .15s;
+}
+.qa-card:hover{
+  border-color:var(--accent);
+  transform:translateY(-1px);
+  box-shadow:0 4px 14px rgba(31,42,51,.06);
+}
+.qa-icon{
+  flex-shrink:0;
+  width:38px; height:38px;
+  border-radius:10px;
+  background:var(--accent-pale);
+  color:var(--accent);
+  display:flex; align-items:center; justify-content:center;
+}
+.qa-body{display:flex; flex-direction:column; gap:1px; flex:1; min-width:0}
+.qa-title{
+  font-family:var(--serif); font-weight:500;
+  font-size:15.5px; color:var(--ink); line-height:1.2;
+}
+.qa-sub{
+  font-family:var(--sans); font-size:12px;
+  color:var(--muted); letter-spacing:.01em;
+}
+.qa-chev{
+  color:var(--muted);
+  display:flex; align-items:center;
+}
+
+/* tracking inside modal */
+.tr-modal{padding:0}
+.tr-modal .t-input-row{display:flex; gap:8px; margin-bottom:6px}
+.tr-modal .t-input{
+  flex:1; min-width:0;
+  border:1px solid var(--line); border-radius:9px;
+  padding:11px 13px;
+  font-family:var(--sans); font-size:13.5px;
+  background:var(--bg); color:var(--ink);
+  outline:none; transition:border-color .15s, background .15s;
+}
+.tr-modal .t-input:focus{border-color:var(--accent); background:var(--paper)}
+.tr-modal .t-input::placeholder{color:var(--muted)}
+.tr-modal .t-hint{
+  font-family:var(--serif); font-style:italic;
+  font-size:12px; color:var(--muted);
+  margin-top:6px;
+}
+.tr-modal .t-notfound{
+  font-family:var(--sans); font-size:12.5px;
+  color:#b34334; margin-top:12px;
+  padding:10px 12px;
+  background:color-mix(in oklab, #b34334 8%, var(--paper));
+  border-radius:8px;
+  display:none;
+}
+.tr-modal .t-notfound.show{display:block}
+.tr-modal .t-result{display:none; margin-top:16px; padding-top:16px; border-top:1px dashed var(--line)}
+.tr-modal .t-result.show{display:block}
+.tr-modal .t-result .header{
+  font-family:var(--sans); font-size:12px;
+  color:var(--muted); margin-bottom:12px;
+  letter-spacing:.02em;
+}
+.tr-modal .t-result .header strong{color:var(--ink); font-family:var(--serif); font-size:15px; font-weight:500}
+.tr-modal .t-row{display:flex; gap:12px; padding-bottom:12px}
+.tr-modal .t-row:last-child{padding-bottom:0}
+.tr-modal .t-row .col-l{display:flex; flex-direction:column; align-items:center; flex-shrink:0}
+.tr-modal .dot{width:10px; height:10px; border-radius:50%; flex-shrink:0; margin-top:4px}
+.tr-modal .dot.done{background:var(--green)}
+.tr-modal .dot.active{background:var(--accent); box-shadow:0 0 0 3px var(--accent-pale)}
+.tr-modal .dot.pending{background:var(--line)}
+.tr-modal .t-mini-line{width:1px; flex:1; background:var(--line); min-height:16px; margin:3px 0}
+.tr-modal .t-row .body .label{font-family:var(--sans); font-size:13px; color:var(--ink)}
+.tr-modal .t-row .body .label.pending{color:var(--muted)}
+.tr-modal .t-row .body .time{font-family:var(--sans); font-size:11.5px; color:var(--muted); margin-top:1px}
+
+/* timeline modal list */
+.tl-list{padding:0 0 6px}
+.tl-list .t-step{display:flex; gap:14px; padding-bottom:18px; position:relative}
+.tl-list .t-step:last-child{padding-bottom:0}
+.tl-list .t-left{display:flex; flex-direction:column; align-items:center; flex-shrink:0; padding-top:3px}
+.tl-list .t-dot{width:10px; height:10px; border-radius:50%; background:var(--line); flex-shrink:0}
+.tl-list .t-dot.active{background:var(--accent); box-shadow:0 0 0 4px var(--accent-pale)}
+.tl-list .t-line{width:1px; flex:1; background:var(--line); margin-top:4px}
+.tl-list .t-step:last-child .t-line{display:none}
+.tl-list .t-body h4{font-family:var(--serif); font-weight:500; font-size:16px; color:var(--ink); margin-bottom:2px}
+.tl-list .t-step:not(.active) .t-body h4{color:var(--ink-2)}
+.tl-list .t-body .date{font-family:var(--sans); font-size:11.5px; font-weight:600; letter-spacing:.04em; color:var(--accent); margin-bottom:4px}
+.tl-list .t-step:not(.active) .t-body .date{color:var(--muted)}
+.tl-list .t-body p{font-family:var(--sans); font-size:12.5px; color:var(--muted); line-height:1.6}
+
+/* ---------- footer ---------- */
+footer.bottom{
+  text-align:center;
+  padding:36px 24px 24px;
+  border-top:1px solid var(--line-soft);
+  margin-top:16px;
+}
+footer.bottom .brand{display:inline-block; margin-bottom:10px}
+footer.bottom p{
+  font-family:var(--serif); font-style:italic; font-size:13.5px;
+  color:var(--muted); line-height:1.7;
+  max-width:32ch; margin:0 auto 18px;
+}
+footer.bottom .links{
+  display:flex; gap:18px; justify-content:center; flex-wrap:wrap;
+  font-family:var(--sans); font-size:12.5px;
+  margin-bottom:18px;
+}
+footer.bottom .links a{color:var(--ink-2); text-decoration:none}
+footer.bottom .links a:hover{color:var(--accent)}
+footer.bottom .copyright{
+  font-family:var(--sans); font-size:11px;
+  color:var(--muted); letter-spacing:.02em;
+}
+
+/* ---------- tweaks ---------- */
+.tw-panel{
+  position:fixed; right:14px; bottom:88px; z-index:60;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:14px;
+  box-shadow:0 18px 50px rgba(31,42,51,.18), 0 2px 6px rgba(31,42,51,.05);
+  width:260px;
+  padding:16px;
+  display:none;
+  font-family:var(--sans);
+}
+.tw-panel.open{display:block}
+.tw-head{display:flex; align-items:center; justify-content:space-between; margin-bottom:12px}
+.tw-head h4{font-family:var(--serif); font-weight:500; font-size:17px; color:var(--ink)}
+.tw-close{color:var(--muted); font-size:14px; padding:4px}
+.tw-row{margin-bottom:12px}
+.tw-row:last-child{margin-bottom:0}
+.tw-row .lbl{font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); font-weight:600; margin-bottom:8px; display:block}
+.tw-opts{display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px}
+.tw-opt{
+  border:1px solid var(--line); background:var(--bg);
+  border-radius:7px; padding:8px 4px;
+  font-size:11.5px; color:var(--ink-2);
+  text-align:center;
+  transition:border-color .15s, background .15s, color .15s;
+}
+.tw-opt.active{border-color:var(--accent); background:var(--accent-pale); color:var(--accent); font-weight:600}
+.tw-swatches{display:flex; gap:8px}
+.tw-swatch{
+  width:36px; height:36px; border-radius:8px;
+  border:2px solid var(--line); position:relative; overflow:hidden;
+  padding:0;
+}
+.tw-swatch.active{border-color:var(--ink)}
+.tw-swatch::after{
+  content:""; position:absolute; bottom:0; right:0;
+  width:50%; height:50%;
+}
+.tw-swatch[data-val="warm"]::after{background:#dd5a23}
+.tw-swatch[data-val="linen"]::after{background:#a86b2c}
+.tw-swatch[data-val="twilight"]::after{background:#e8884e}
+
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<nav class="topbar">
+  <div class="row">
+    <a href="#top" class="brand">nurunala <span class="x">&amp;</span> nuarista</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero wrap" id="top">
+  <h1 style="font-size: 35px">Setiap pernikahan punya cerita. Dan inilah <span style="color: rgb(221, 90, 35)">kisah kami,</span> apa adanya.</h1>
+  <p class="lede">Senang dan sedihnya. Lega dan lelahnya. Peluk dan tengkarnya. Semoga bermakna.</p>
+  <div class="divider-orn"><span class="star">✦</span></div>
+</header>
+
+<!-- PREORDER PILL -->
+<div class="po-strip">
+  <span class="po-pill">
+    <span class="pulse"></span>
+    <span><em>Masa pre-order dibuka</em> · Gratis ongkir seluruh Indonesia</span>
+  </span>
+</div>
+
+<!-- BOOKS -->
+<section class="wrap" id="books">
+  <div class="s-head">
+    <p class="eyebrow" style="height: 0px">
+</p>
+    <h2>Dua cerita, satu perjalanan.</h2>
+  </div>
+
+  <!-- BUKU 1: yang baru / preorder -->
+  <article class="book">
+    <div class="book-cover">
+      <img src="covers/ternyata-kita-belum-siap-nikah.png" alt="Ternyata Kita Belum Siap Nikah" />
+    </div>
+    <div class="book-tags">
+      <span class="tag">TERBIT 2026</span>
+      <span class="tag muted">Buku baru</span>
+    </div>
+    <h3>Ternyata Kita Belum Siap Nikah</h3>
+    <p class="meta">Memoar 10 Tahun Pernikahan</p>
+    <p class="desc">Setelah sepuluh tahun, apa yang berubah? Azhar &amp; Vidia menceritakan 10 pelajaran paling berharga dari 10 tahun berumah tangga. Apa adanya.</p>
+    <div class="footer">
+      <div class="price">
+        <span class="pre">Pre-order</span>
+        <span class="amt">Rp 88.000</span>
+        <span class="ship-line">+ gratis ongkir</span>
+      </div>
+      <div class="btn-group">
+        <button class="btn btn-ghost" onclick="openModal('buku2')">Sinopsis</button>
+        <a class="btn btn-primary" href="https://nurunala.myr.id/pl/ternyata-kita-belum-siap-nikah/" target="_blank" rel="noopener" onclick="event.preventDefault(); openPay(this.href)">Pesan</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- BUKU 2: yang lama -->
+  <article class="book">
+    <div class="book-cover">
+      <img src="covers/belajar-mencintai.png" alt="Belajar Mencintai" />
+    </div>
+    <div class="book-tags">
+      <span class="tag blue">TERBIT 2019</span>
+      <span class="tag muted">CETAK ULANG KEEMPAT</span>
+    </div>
+    <h3>Belajar Mencintai</h3>
+    <p class="meta">Memoar Tahun-Tahun Pertama Pernikahan</p>
+    <p class="desc">Azhar menikah di usia 20 tahun. Saat itu masih mahasiswa ilmu gizi yang bermimpi jadi penulis. Vidia seniornya di kampus, tiga tahun lebih tua.</p>
+    <div class="footer">
+      <div class="price">
+        <span class="pre">Harga</span>
+        <span class="amt">Rp 88.000</span>
+        <span class="ship-line">+ gratis ongkir</span>
+      </div>
+      <div class="btn-group">
+        <button class="btn btn-ghost" onclick="openModal('buku1')">Sinopsis</button>
+                <a class="btn btn-primary" href="https://nurunala.myr.id/pl/belajar-mencintai" target="_blank" rel="noopener" onclick="event.preventDefault(); openPay(this.href)">Pesan</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- BUNDLE -->
+  <div class="bundle" style="padding: 30px 20px 24px">
+    <span class="bundle-ribbon">★ PILIHAN TERBAIK ★</span>
+    <div class="bundle-covers">
+      <div class="book-cover"><img src="covers/belajar-mencintai.png" alt="Belajar Mencintai" /></div>
+      <div class="book-cover"><img src="covers/ternyata-kita-belum-siap-nikah.png" alt="Ternyata Kita Belum Siap Nikah" /></div>
+    </div>
+    <h3>Koleksi keduanya, lengkapi ceritamu.</h3>
+    <p class="desc">Cerita di awal-awal pernikahan, hingga gejolak yang dihadapi menuju sepuluh tahun pernikahan.</p>
+    <div class="bp-row">
+      <span class="bp-strike">Rp 176.000</span>
+      <span class="bp-main">Rp 158.000</span>
+    </div>
+    <div class="bp-foot">
+      <span class="bp-save">Hemat Rp 18.000</span>
+      <span class="bp-micro">Lumayan buat beli kopi susu. ☕</span>
+    </div>
+    <p class="bundle-ship">+ gratis ongkir seluruh Indonesia, selama pre-order</p>
+        <a class="btn btn-primary btn-block" href="https://nurunala.myr.id/pl/paket-bundel-memoar" target="_blank" rel="noopener" onclick="event.preventDefault(); openPay(this.href)">Pesan Paket Bundel</a>
+  </div>
+
+  <!-- QUICK ACTIONS -->
+  <div class="qa-grid">
+    <button class="qa-card" onclick="openTimeline()">
+      <span class="qa-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>
+      </span>
+      <span class="qa-body">
+        <span class="qa-title">Timeline Pre-order</span>
+        <span class="qa-sub">Dari pemesanan sampai sampai</span>
+      </span>
+      <span class="qa-chev">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+      </span>
+    </button>
+    <a class="qa-card" href="https://wa.me/6281211006417?text=Halo,%20saya%20mau%20cek%20status%20pesanan%20buku%20saya.%20Atas%20nama%3A" target="_blank" rel="noopener">
+      <span class="qa-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.05 2zm0 18.15h-.01a8.23 8.23 0 01-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.264 8.264 0 01-1.26-4.37c0-4.54 3.71-8.24 8.26-8.24 2.2 0 4.27.86 5.83 2.42a8.183 8.183 0 012.42 5.84c0 4.54-3.7 8.21-8.25 8.21zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.81-.78.97-.14.17-.29.19-.54.06a6.74 6.74 0 01-1.98-1.22 7.39 7.39 0 01-1.37-1.7c-.14-.24-.02-.37.11-.5.11-.11.24-.29.37-.43.12-.14.16-.24.24-.4.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42-.14-.01-.31-.01-.48-.01-.17 0-.43.06-.66.31-.23.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.55.13.17 1.73 2.65 4.19 3.71.58.25 1.04.4 1.4.51.59.19 1.13.16 1.55.1.47-.07 1.45-.59 1.66-1.16.21-.57.21-1.06.14-1.16-.06-.11-.22-.18-.47-.31z"/></svg>
+      </span>
+      <span class="qa-body">
+        <span class="qa-title">Cek Status Pesanan</span>
+        <span class="qa-sub">Hubungi kami via WhatsApp</span>
+      </span>
+      <span class="qa-chev">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+      </span>
+    </a>
+  </div>
+</section>
+
+<!-- STICKY CTA -->
+<div class="sticky-cta">
+  <div class="inner">
+        <a class="btn btn-primary" href="https://nurunala.myr.id/pl/paket-bundel-memoar" target="_blank" rel="noopener" onclick="event.preventDefault(); openPay(this.href)">Pesan Paket Bundel</a>
+  </div>
+</div>
+
+<!-- MODAL: SINOPSIS -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeOnBg(event)">
+  <div class="modal-sheet">
+    <button class="modal-close" onclick="closeModal()" aria-label="Tutup">✕</button>
+    <div class="modal-handle"></div>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<!-- MODAL: PAYMENT (mayar iframe) -->
+<div class="modal-overlay" id="payOverlay" onclick="closePayBg(event)">
+  <div class="modal-sheet pay-sheet">
+    <div class="pay-head">
+      <span class="modal-badge" style="margin-bottom:0">Pembayaran</span>
+      <div class="pay-actions">
+        <a id="payNewTab" href="#" target="_blank" rel="noopener" class="pay-open-tab">Buka di tab baru ↗</a>
+        <button class="modal-close pay-close" onclick="closePay()" aria-label="Tutup">✕</button>
+      </div>
+    </div>
+    <iframe id="payFrame" src="" title="Pembayaran" allow="payment"></iframe>
+  </div>
+</div>
+
+<!-- MODAL: ORDER FORM -->
+<div class="modal-overlay" id="orderOverlay" onclick="closeOrderBg(event)">
+  <div class="modal-sheet">
+    <button class="modal-close" onclick="closeOrder()" aria-label="Tutup">✕</button>
+    <div class="modal-handle"></div>
+    <span class="modal-badge">Form Pemesanan</span>
+    <h2 class="modal-title">Pesan <em id="orderItem" style="color:var(--accent); font-style:italic">—</em></h2>
+    <p class="modal-tagline" style="padding-bottom:0; border-bottom:none; margin-bottom:20px">Isi data berikut. Setelah klik <em>Pesan Sekarang</em>, kamu akan diarahkan ke WhatsApp kami untuk konfirmasi pembayaran.</p>
+    <form id="orderForm" onsubmit="submitOrder(event)" class="order-form" novalidate>
+      <div class="of-row">
+        <label for="of-nama">Nama</label>
+        <input id="of-nama" type="text" required autocomplete="name" placeholder="Nama lengkap" />
+      </div>
+      <div class="of-row">
+        <label for="of-wa">No WhatsApp</label>
+        <input id="of-wa" type="tel" required inputmode="tel" autocomplete="tel" placeholder="08xxxxxxxxxx" />
+      </div>
+      <div class="of-row">
+        <label for="of-prov">Provinsi</label>
+        <select id="of-prov" required onchange="onProvChange()">
+          <option value="">— Pilih provinsi —</option>
+        </select>
+      </div>
+      <div class="of-row">
+        <label for="of-kota">Kota/Kabupaten</label>
+        <select id="of-kota" required disabled onchange="onKotaChange()">
+          <option value="">— Pilih provinsi dulu —</option>
+        </select>
+      </div>
+      <div class="of-row">
+        <label for="of-kec">Kecamatan</label>
+        <select id="of-kec" required disabled>
+          <option value="">— Pilih kota/kabupaten dulu —</option>
+        </select>
+      </div>
+      <div class="of-row">
+        <label for="of-alamat">Detail Alamat</label>
+        <textarea id="of-alamat" rows="3" required placeholder="Jalan, nomor rumah, RT/RW, kode pos…"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block" style="margin-top:6px">Pesan Sekarang</button>
+    </form>
+  </div>
+</div>
+
+<!-- MODAL: TRACKING -->
+<div class="modal-overlay" id="trackingOverlay" onclick="closeTrackingBg(event)">
+  <div class="modal-sheet">
+    <button class="modal-close" onclick="closeTracking()" aria-label="Tutup">✕</button>
+    <div class="modal-handle"></div>
+    <span class="modal-badge">Lacak Pesanan</span>
+    <h2 class="modal-title">Sudah pesan? <em style="color:var(--accent); font-style:italic">Cek statusnya.</em></h2>
+    <p class="modal-tagline" style="padding-bottom:0; border-bottom:none; margin-bottom:18px">Masukkan kode pesananmu untuk melihat status pengiriman saat ini.</p>
+    <div class="tr-modal">
+      <div class="t-input-row">
+        <input id="trackInput" class="t-input" type="text" placeholder="NRL-2024-001" autocomplete="off" />
+        <button class="btn btn-dark" onclick="cekStatus()">Cek</button>
+      </div>
+      <p class="t-hint">Kode dikirim via WhatsApp setelah pembayaran dikonfirmasi.</p>
+      <div class="t-notfound" id="trackNotFound">Kode tidak ditemukan. Pastikan kode sudah benar — atau hubungi kami di WhatsApp.</div>
+      <div class="t-result" id="trackResult"></div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: TIMELINE -->
+<div class="modal-overlay" id="timelineOverlay" onclick="closeTimelineBg(event)">
+  <div class="modal-sheet">
+    <button class="modal-close" onclick="closeTimeline()" aria-label="Tutup">✕</button>
+    <div class="modal-handle"></div>
+    <span class="modal-badge">Pre-order</span>
+    <p class="modal-sec" style="margin-top:8px">Timeline Pre-order</p>
+    <div class="tl-list">
+      <div class="t-step active">
+        <div class="t-left"><div class="t-dot active"></div><div class="t-line"></div></div>
+        <div class="t-body">
+          <h4>Masa Pemesanan</h4>
+          <p class="date">25 Mei – 5 Juni 2026</p>
+          <p>Pre-order dibuka. Pesan sebelum tutup.</p>
+        </div>
+      </div>
+      <div class="t-step">
+        <div class="t-left"><div class="t-dot"></div><div class="t-line"></div></div>
+        <div class="t-body">
+          <h4>Percetakan</h4>
+          <p class="date">6 – 20 Juni 2026</p>
+          <p>Buku dicetak sesuai jumlah pesanan.</p>
+        </div>
+      </div>
+      <div class="t-step">
+        <div class="t-left"><div class="t-dot"></div></div>
+        <div class="t-body">
+          <h4>Pengemasan &amp; Pengiriman</h4>
+          <p class="date">21 – 25 Juni 2026</p>
+          <p>Dibungkus bubble wrap, lalu dikirim ke seluruh Indonesia.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TWEAKS PANEL -->
+<div class="tw-panel" id="twPanel">
+  <div class="tw-head">
+    <h4>Tweaks</h4>
+    <button class="tw-close" onclick="closeTweaks()">✕</button>
+  </div>
+  <div class="tw-row">
+    <span class="lbl">Palette</span>
+    <div class="tw-swatches" id="twPalette">
+      <button class="tw-swatch" data-val="warm" style="background:#fbf5ec" title="Warm"></button>
+      <button class="tw-swatch" data-val="linen" style="background:#f1e9da" title="Linen"></button>
+      <button class="tw-swatch" data-val="twilight" style="background:#161a20" title="Twilight"></button>
+    </div>
+  </div>
+  <div class="tw-row">
+    <span class="lbl">Font</span>
+    <div class="tw-opts" id="twFont">
+      <button class="tw-opt" data-val="editorial">Editorial</button>
+      <button class="tw-opt" data-val="classic">Classic</button>
+      <button class="tw-opt" data-val="modern">Modern</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ---------- sinopsis (preserved) ---------- */
+const sinopsis = {
+  buku1: {
+    badge: "Buku Pertama · 5 Tahun Pertama",
+    title: "Belajar Mencintai",
+    tagline: "Azhar menikah di usia 20 tahun. Saat itu masih mahasiswa, bermimpi menjadi penulis. Vidia seniornya di kampus, tiga tahun lebih tua. Keduanya memutuskan hidup bersama dan belajar bahwa ketika menikah, kita harus bertransformasi dari orang yang jatuh cinta menjadi orang yang mencintai.\n\nKabar baiknya, mencintai adalah keterampilan. Dan semua keterampilan bisa dipelajari.",
+    wa: "https://wa.me/6281211006417?text=Hai,%20saya%20mau%20pesan%20karya%20Azhar%20Nurunala%20yang%20berjudul%20*Belajar%20Mencintai*.%0A%0ANama%3A%0ANo%20WA%3A%0AAlamat%3A",
+    payUrl: "https://nurunala.myr.id/pl/belajar-mencintai",
+    chapters: [
+      { num: "Prolog", title: "Cinta itu Soal Waktu" },
+      { num: "Bab 1", title: "Jatuh Cinta vs Mencintai" },
+      { num: "Bab 2", title: "Cinta itu Tumbuh & Menumbuhkan" },
+      { num: "Bab 3", title: "Saling Mengenal Tanpa Akhir" },
+      { num: "Bab 4", title: "Kehadiran Orang Ketiga" },
+      { num: "Bab 5", title: "Berkarya Bersama" },
+      { num: "Bab 6", title: "Kepergian-kepergian di Bulan Juli" },
+      { num: "Bab 7", title: "Mencari Titik Temu" },
+      { num: "Bab 8", title: "Mencintai Diri Sendiri" },
+      { num: "Bab 9", title: "Jatuh Cinta Setiap Hari" },
+      { num: "Bab 10", title: "Pernikahan & Sepaket Kejutan — oleh Vidia" },
+      { num: "Epilog", title: "Belajar Mencintai" }
+    ]
+  },
+  buku2: {
+    badge: "Buku Kedua · 10 Tahun Kemudian",
+    title: "Ternyata Kita Belum Siap Nikah",
+    tagline: "Setelah sepuluh tahun, apa yang berubah? Azhar & Vidia menceritakan 10 pelajaran paling berharga dari 10 tahun berumah tangga. Apa adanya.",
+    wa: "https://wa.me/6281212340604?text=Halo,%20saya%20mau%20pesan%20*Ternyata%20Kita%20Belum%20Siap%20Nikah*%201%20eks%20%F0%9F%99%8F",
+    payUrl: "https://nurunala.myr.id/pl/ternyata-kita-belum-siap-nikah/",
+    chapters: [
+      { num: "Prolog", title: "Sepuluh Tahun Kemudian" },
+      { num: "Bab 1", title: "Saling Mengenal Penting, Saling Menerima Jauh Lebih Penting" },
+      { num: "Bab 2", title: "Berdamai dengan 'Cukup' Sebelum Mata Hati Tertutup" },
+      { num: "Bab 3", title: "Sayangi Rutinitas, Rindukan Spontanitas" },
+      { num: "Bab 4", title: "Semua Butuh Ruang Sendiri" },
+      { num: "Bab 5", title: "Berbagi Tugas Agar Tetap Waras" },
+      { num: "Bab 6", title: "Ego Bikin Bego, So Let It Go" },
+      { num: "Bab 7", title: "Tak Ada Keresahan yang Tak Layak Dibicarakan" },
+      { num: "Bab 8", title: "Rayakan Apa Saja Setiap Hari" },
+      { num: "Bab 9", title: "Berhenti Memuja Uang, Masa Kecil Anak Tak Bisa Diulang" },
+      { num: "Bab 10", title: "Rumah Tangga adalah Bahtera, Bukan Penjara" },
+      { num: "Epilog", title: "Hujan Pasti Reda" }
+    ]
+  }
+};
+
+function openModal(id){
+  const d = sinopsis[id];
+  const ch = d.chapters.map(c => `<li><span class="ch-num">${c.num}</span><span class="ch-title">${c.title}</span></li>`).join('');
+  const cta = d.payUrl
+    ? `<a href="${d.payUrl}" target="_blank" rel="noopener" onclick="event.preventDefault(); closeModal(); openPay(this.href)" class="btn btn-primary btn-block">Pesan Buku Ini</a>`
+    : `<button onclick='closeModal(); openOrderForm(${JSON.stringify(d.title)})' class="btn btn-primary btn-block">Pesan Buku Ini</button>`;
+  document.getElementById('modalContent').innerHTML = `
+    <span class="modal-badge">${d.badge}</span>
+    <h2 class="modal-title">${d.title}</h2>
+    <p class="modal-tagline">${d.tagline}</p>
+    <p class="modal-sec">Isi Buku</p>
+    <ul class="ch-list">${ch}</ul>
+    ${cta}
+  `;
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(){
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeOnBg(e){
+  if (e.target.id === 'modalOverlay') closeModal();
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { closeModal(); closeTimeline(); closeTracking(); closePay(); closeOrder(); closeTweaks(); }
+});
+
+/* ---------- payment modal ---------- */
+function openPay(url){
+  const frame = document.getElementById('payFrame');
+  const tab = document.getElementById('payNewTab');
+  frame.src = url;
+  tab.href = url;
+  document.getElementById('payOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closePay(){
+  document.getElementById('payOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+  setTimeout(() => { document.getElementById('payFrame').src = ''; }, 250);
+}
+function closePayBg(e){
+  if (e.target.id === 'payOverlay') closePay();
+}
+
+/* ---------- order form ---------- */
+const WIL_API = 'https://www.emsifa.com/api-wilayah-indonesia/api';
+let provincesLoaded = false;
+
+async function loadProvinces(){
+  if (provincesLoaded) return;
+  const sel = document.getElementById('of-prov');
+  try {
+    const res = await fetch(`${WIL_API}/provinces.json`);
+    if (!res.ok) throw new Error('http ' + res.status);
+    const data = await res.json();
+    data.sort((a, b) => a.name.localeCompare(b.name));
+    data.forEach(p => {
+      const opt = document.createElement('option');
+      opt.value = p.id;
+      opt.textContent = p.name;
+      opt.dataset.name = p.name;
+      sel.appendChild(opt);
+    });
+    provincesLoaded = true;
+  } catch(e) {
+    sel.innerHTML = '<option value="">— Gagal memuat. Refresh halaman —</option>';
+  }
+}
+
+async function onProvChange(){
+  const sel = document.getElementById('of-prov');
+  const provId = sel.value;
+  const kotaSel = document.getElementById('of-kota');
+  const kecSel = document.getElementById('of-kec');
+  kotaSel.innerHTML = '<option value="">' + (provId ? 'Memuat…' : '— Pilih provinsi dulu —') + '</option>';
+  kecSel.innerHTML = '<option value="">— Pilih kota/kabupaten dulu —</option>';
+  kotaSel.disabled = true;
+  kecSel.disabled = true;
+  if (!provId) {
+    kotaSel.innerHTML = '<option value="">— Pilih provinsi dulu —</option>';
+    return;
+  }
+  try {
+    const res = await fetch(`${WIL_API}/regencies/${provId}.json`);
+    if (!res.ok) throw new Error('http ' + res.status);
+    const data = await res.json();
+    data.sort((a, b) => a.name.localeCompare(b.name));
+    kotaSel.innerHTML = '<option value="">— Pilih kota/kabupaten —</option>';
+    data.forEach(k => {
+      const opt = document.createElement('option');
+      opt.value = k.id;
+      opt.textContent = k.name;
+      opt.dataset.name = k.name;
+      kotaSel.appendChild(opt);
+    });
+    kotaSel.disabled = false;
+  } catch(e) {
+    kotaSel.innerHTML = '<option value="">— Gagal memuat —</option>';
+  }
+}
+
+async function onKotaChange(){
+  const sel = document.getElementById('of-kota');
+  const kotaId = sel.value;
+  const kecSel = document.getElementById('of-kec');
+  kecSel.innerHTML = '<option value="">' + (kotaId ? 'Memuat…' : '— Pilih kota/kabupaten dulu —') + '</option>';
+  kecSel.disabled = true;
+  if (!kotaId) {
+    kecSel.innerHTML = '<option value="">— Pilih kota/kabupaten dulu —</option>';
+    return;
+  }
+  try {
+    const res = await fetch(`${WIL_API}/districts/${kotaId}.json`);
+    if (!res.ok) throw new Error('http ' + res.status);
+    const data = await res.json();
+    data.sort((a, b) => a.name.localeCompare(b.name));
+    kecSel.innerHTML = '<option value="">— Pilih kecamatan —</option>';
+    data.forEach(d => {
+      const opt = document.createElement('option');
+      opt.value = d.id;
+      opt.textContent = d.name;
+      opt.dataset.name = d.name;
+      kecSel.appendChild(opt);
+    });
+    kecSel.disabled = false;
+  } catch(e) {
+    kecSel.innerHTML = '<option value="">— Gagal memuat —</option>';
+  }
+}
+
+function selName(id){
+  const el = document.getElementById(id);
+  if (!el || !el.value) return '';
+  const opt = el.selectedOptions[0];
+  return opt ? (opt.dataset.name || opt.textContent || '') : '';
+}
+
+let currentOrderItem = '';
+function openOrderForm(item){
+  currentOrderItem = item;
+  document.getElementById('orderItem').textContent = item;
+  document.getElementById('orderOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  loadProvinces();
+  setTimeout(() => { try { document.getElementById('of-nama').focus(); } catch(e){} }, 350);
+}
+function closeOrder(){
+  document.getElementById('orderOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeOrderBg(e){
+  if (e.target.id === 'orderOverlay') closeOrder();
+}
+function submitOrder(e){
+  e.preventDefault();
+  const nama = document.getElementById('of-nama').value.trim();
+  const wa = document.getElementById('of-wa').value.trim();
+  const prov = selName('of-prov');
+  const kota = selName('of-kota');
+  const kec = selName('of-kec');
+  const alamat = document.getElementById('of-alamat').value.trim();
+  if (!nama || !wa || !prov || !kota || !kec || !alamat) {
+    document.getElementById('orderForm').reportValidity();
+    return;
+  }
+  const msg =
+    `Halo, saya mau pesan *${currentOrderItem}*\n\n` +
+    `Nama: ${nama}\n` +
+    `No WhatsApp: ${wa}\n` +
+    `Provinsi: ${prov}\n` +
+    `Kota/Kabupaten: ${kota}\n` +
+    `Kecamatan: ${kec}\n` +
+    `Detail Alamat: ${alamat}`;
+  const url = `https://wa.me/6281211006417?text=${encodeURIComponent(msg)}`;
+  // Use an anchor click for best cross-browser / in-app compatibility
+  const link = document.createElement('a');
+  link.href = url;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  closeOrder();
+}
+
+/* ---------- timeline modal ---------- */
+function openTimeline(){
+  document.getElementById('timelineOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeTimeline(){
+  document.getElementById('timelineOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeTimelineBg(e){
+  if (e.target.id === 'timelineOverlay') closeTimeline();
+}
+
+/* ---------- tracking modal ---------- */
+function openTracking(){
+  document.getElementById('trackingOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => document.getElementById('trackInput').focus(), 350);
+}
+function closeTracking(){
+  document.getElementById('trackingOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeTrackingBg(e){
+  if (e.target.id === 'trackingOverlay') closeTracking();
+}
+
+const orders = {
+  "NRL-2024-001": { name: "Belajar Mencintai", steps: [
+    { label: "Pesanan diterima", time: "12 Jan", done: true },
+    { label: "Sedang diproses", time: "13 Jan", done: true },
+    { label: "Dalam pengiriman", time: "15 Jan", active: true },
+    { label: "Terkirim", time: "—", pending: true }
+  ]},
+  "NRL-2024-002": { name: "Paket Bundel", steps: [
+    { label: "Pesanan diterima", time: "10 Jan", done: true },
+    { label: "Sedang diproses", time: "11 Jan", done: true },
+    { label: "Dalam pengiriman", time: "13 Jan", done: true },
+    { label: "Terkirim", time: "14 Jan", done: true }
+  ]},
+  "NRL-2024-003": { name: "Ternyata Kita Belum Siap Nikah", steps: [
+    { label: "Pesanan diterima", time: "20 Jan", active: true },
+    { label: "Sedang diproses", time: "—", pending: true },
+    { label: "Dalam pengiriman", time: "—", pending: true },
+    { label: "Terkirim", time: "—", pending: true }
+  ]}
+};
+
+function cekStatus(){
+  const code = document.getElementById('trackInput').value.trim().toUpperCase();
+  const res = document.getElementById('trackResult');
+  const nf = document.getElementById('trackNotFound');
+  res.classList.remove('show');
+  nf.classList.remove('show');
+  if (!orders[code]) { nf.classList.add('show'); return; }
+  const o = orders[code];
+  let html = `<div class="header">Pesanan · <strong>${o.name}</strong></div>`;
+  o.steps.forEach((s,i) => {
+    const cls = s.done ? 'done' : s.active ? 'active' : 'pending';
+    html += `<div class="t-row">
+      <div class="col-l">
+        <div class="dot ${cls}"></div>
+        ${i < o.steps.length - 1 ? '<div class="t-mini-line"></div>' : ''}
+      </div>
+      <div class="body">
+        <div class="label ${s.pending && !s.active ? 'pending' : ''}">${s.label}</div>
+        <div class="time">${s.time}</div>
+      </div>
+    </div>`;
+  });
+  res.innerHTML = html;
+  res.classList.add('show');
+}
+document.getElementById('trackInput').addEventListener('keydown', e => {
+  if (e.key === 'Enter') cekStatus();
+});
+
+/* ---------- tweaks ---------- */
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "palette": "warm",
+  "font": "editorial"
+}/*EDITMODE-END*/;
+let tweaks = { ...TWEAK_DEFAULTS };
+
+function applyTweaks(){
+  const html = document.documentElement;
+  html.setAttribute('data-palette', tweaks.palette);
+  html.setAttribute('data-font', tweaks.font);
+  document.querySelectorAll('#twPalette .tw-swatch').forEach(b => b.classList.toggle('active', b.dataset.val === tweaks.palette));
+  document.querySelectorAll('#twFont .tw-opt').forEach(b => b.classList.toggle('active', b.dataset.val === tweaks.font));
+}
+function setTweak(key, val){
+  tweaks[key] = val;
+  applyTweaks();
+  try { window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { [key]: val } }, '*'); } catch(e){}
+}
+document.querySelectorAll('#twPalette .tw-swatch').forEach(b => b.addEventListener('click', () => setTweak('palette', b.dataset.val)));
+document.querySelectorAll('#twFont .tw-opt').forEach(b => b.addEventListener('click', () => setTweak('font', b.dataset.val)));
+applyTweaks();
+
+function openTweaks(){ document.getElementById('twPanel').classList.add('open'); }
+function closeTweaks(){
+  document.getElementById('twPanel').classList.remove('open');
+  try { window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*'); } catch(e){}
+}
+window.addEventListener('message', e => {
+  const d = e.data;
+  if (!d || !d.type) return;
+  if (d.type === '__activate_edit_mode') openTweaks();
+  if (d.type === '__deactivate_edit_mode') closeTweaks();
+});
+try { window.parent.postMessage({ type: '__edit_mode_available' }, '*'); } catch(e){}
+</script>
+</body>
+</html>
+
+<style id="__om-edit-overrides">
+#top >:is(h1,h2) >:is(h1,h2,h3,h4,h5,h6,p,li,dt,dd,blockquote,figcaption,label,span,a,em,strong,small,td,th,caption) { color: rgb(0, 0, 0) !important }
+</style>
