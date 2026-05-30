@@ -9,17 +9,16 @@
 
 <!-- Open Graph (Facebook, WhatsApp, Instagram) -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://nurunala.blog/" />
 <meta property="og:title" content="nurunala × nuarista — Memoar Pernikahan" />
 <meta property="og:description" content="Setiap pernikahan punya cerita. Dan inilah kisah kami, apa adanya. Pre-order dibuka." />
-<meta property="og:image" content="https://nurunala.blog/covers/belajar-mencintai.png" />
+<meta property="og:image" content="covers/belajar-mencintai-web.jpg" />
 <meta property="og:locale" content="id_ID" />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="nurunala × nuarista — Memoar Pernikahan" />
 <meta name="twitter:description" content="Pre-order dua memoar pernikahan oleh Azhar & Vidia. Gratis ongkir seluruh Indonesia." />
-<meta name="twitter:image" content="https://nurunala.blog/covers/belajar-mencintai.png" />
+<meta name="twitter:image" content="covers/belajar-mencintai-web.jpg" />
 
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23dd5a23'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-style='italic' font-size='22' font-weight='500' text-anchor='middle' fill='%23fffaf0'%3En%3C/text%3E%3C/svg%3E" />
@@ -33,13 +32,13 @@
   --serif: "Crimson Pro", Georgia, serif;
   --sans: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
 
-  --bg:#f6f3ec;
-  --paper:#ffffff;
+  --bg:#ffffff;
+  --paper:#f7f6f2;
   --ink:#1c1916;
   --ink-2:#4a4640;
   --muted:#8a8175;
-  --line:#e8e2d3;
-  --line-soft:#f0ebde;
+  --line:#e4e0d6;
+  --line-soft:#edeae1;
 
   --accent:#dd5a23;
   --accent-deep:#b94715;
@@ -137,17 +136,17 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .brand .x{display:inline-block; color:var(--muted); font-style:normal; margin:0 4px; font-weight:400}
 
 /* ---------- hero ---------- */
-.hero{padding:52px 0 28px; text-align:center}
+.hero{padding:72px 0 32px; text-align:center}
 .hero .eyebrow{margin-bottom:20px}
 .hero h1{
   font-family:var(--serif); font-weight:500;
-  font-size:32px; line-height:1.18;
-  letter-spacing:-.01em;
+  font-size:32px; line-height:1.22;
+  letter-spacing:-.015em;
   color:var(--ink);
   text-wrap:balance;
-  margin-bottom:16px;
+  margin-bottom:18px;
 }
-.hero h1 em{font-style:italic; color:var(--accent); font-weight:500}
+.hero h1 em{font-style:normal; color:var(--accent); font-weight:600}
 .hero p.lede{
   font-family:var(--sans);
   font-size:14.5px; line-height:1.75;
@@ -164,40 +163,56 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 }
 .hero .by strong{color:var(--ink-2); font-weight:500}
 .divider-orn{
-  display:flex; align-items:center; justify-content:center; gap:10px;
-  margin:22px auto 0;
+  display:flex; align-items:center; justify-content:center;
+  margin:30px auto 0;
 }
-.divider-orn::before, .divider-orn::after{
-  content:""; height:1px; width:32px; background:var(--line);
+.divider-orn::before{
+  content:""; height:1px; width:40px; background:var(--line);
 }
-.divider-orn .star{color:var(--accent); font-size:11px; opacity:.7}
+.divider-orn .star{display:none}
 
 /* ---------- preorder strip ---------- */
+/* ---------- preorder ship pill (cute) ---------- */
 .po-strip{
-  margin:0 auto;
-  text-align:center;
-  padding:8px 24px 32px;
+  display:flex; flex-direction:column; align-items:center; gap:11px;
+  padding:2px 24px 30px;
 }
 .po-pill{
   display:inline-flex; align-items:center; gap:10px;
-  background:var(--paper);
-  border:1px solid var(--line);
+  background:var(--accent-pale);
+  border:1px solid color-mix(in oklab, var(--accent) 30%, transparent);
   border-radius:999px;
-  padding:8px 16px;
-  font-family:var(--sans); font-size:12.5px;
-  color:var(--ink-2);
-  letter-spacing:.02em;
+  padding:9px 18px 9px 15px;
+  font-family:var(--sans); font-size:13px;
+  color:var(--accent-deep); font-weight:500; letter-spacing:.005em;
+  box-shadow:0 7px 18px rgba(221,90,35,.16);
+  animation:po-float 3.6s ease-in-out infinite;
 }
-.po-pill .pulse{
-  width:7px; height:7px; border-radius:50%; background:var(--accent);
-  box-shadow:0 0 0 4px var(--accent-pale);
-  animation:pulse 2.2s infinite;
+.po-pill strong{font-weight:700}
+.po-truck{
+  position:relative; flex-shrink:0;
+  display:flex; align-items:center; justify-content:flex-end;
+  width:34px; height:18px;
 }
-@keyframes pulse{
-  0%,100%{box-shadow:0 0 0 0 rgba(221,90,35,.4)}
-  50%{box-shadow:0 0 0 7px rgba(221,90,35,0)}
+.po-truck svg{color:var(--accent); animation:po-bob .65s ease-in-out infinite}
+.po-dash{
+  position:absolute; left:0; height:2px; width:7px;
+  border-radius:2px; background:var(--accent); opacity:0;
 }
-.po-pill em{color:var(--accent); font-style:normal; font-weight:600}
+.po-dash:nth-child(1){top:4px;  animation:po-dash 1s linear infinite}
+.po-dash:nth-child(2){top:8px;  animation:po-dash 1s linear infinite .2s}
+.po-dash:nth-child(3){top:12px; animation:po-dash 1s linear infinite .4s}
+@keyframes po-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-2.5px)}}
+@keyframes po-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-1.5px)}}
+@keyframes po-dash{
+  0%{opacity:0; transform:translateX(7px)}
+  30%{opacity:.85}
+  100%{opacity:0; transform:translateX(-5px)}
+}
+@media (prefers-reduced-motion: reduce){
+  .po-pill,.po-truck svg{animation:none !important}
+  .po-dash{display:none}
+}
 
 /* ---------- sections ---------- */
 section{padding:32px 0}
@@ -215,31 +230,43 @@ section{padding:32px 0}
 .book{
   background:var(--paper);
   border:1px solid var(--line);
-  border-radius:14px;
-  padding:20px;
-  margin-bottom:14px;
+  border-radius:12px;
+  padding:32px 24px 24px;
+  margin-bottom:16px;
+}
+/* shelf tint removed for a flatter, cleaner surface */
+.book.warm,
+.book.cool{
+  background: var(--paper);
+  border-color: var(--line);
 }
 .book-cover{
-  width:100%; aspect-ratio:13/19;
-  border-radius:6px;
+  width:70%;
+  max-width:260px;
+  margin:6px auto 26px;
+  aspect-ratio:13/19;
+  border-radius:3px;
   overflow:hidden;
-  margin-bottom:16px;
-  border:1px solid var(--line);
-  background:var(--bg);
-  box-shadow:0 6px 18px rgba(31,42,51,.10);
+  border:1px solid rgba(31,25,22,.10);
+  background:#fff;
+  box-shadow:0 6px 18px rgba(31,42,51,.08);
 }
 .book-cover img{width:100%; height:100%; object-fit:cover; display:block}
 
-.book-tags{display:flex; gap:8px; margin-bottom:10px; flex-wrap:wrap}
+.book-tags{display:flex; gap:8px; margin-bottom:12px; flex-wrap:wrap}
 .tag{
   font-family:var(--sans);
   font-size:9.5px; letter-spacing:.18em; text-transform:uppercase;
-  padding:4px 9px; border-radius:999px;
-  color:var(--accent); background:var(--accent-pale);
+  padding:3px 0; border-radius:0;
+  color:var(--muted); background:transparent;
   font-weight:600;
+  white-space:nowrap;
 }
-.tag.blue{color:var(--blue); background:var(--blue-pale)}
-.tag.muted{color:var(--muted); background:transparent; border:1px solid var(--line)}
+.tag + .tag::before{
+  content:"·"; margin-right:8px; color:var(--line);
+}
+.tag.blue{color:var(--muted); background:transparent}
+.tag.muted{color:var(--muted); background:transparent; border:none}
 
 .book h3{
   font-family:var(--serif); font-weight:500;
@@ -260,11 +287,13 @@ section{padding:32px 0}
   margin-bottom:16px;
 }
 .book .footer{
-  display:flex; align-items:center; justify-content:space-between;
+  display:flex; align-items:flex-end; justify-content:space-between;
   gap:12px; flex-wrap:wrap;
   padding-top:14px;
   border-top:1px solid var(--line-soft);
 }
+.book .footer .price{flex:1 1 auto; min-width:0}
+.book .footer .btn-group{flex:0 0 auto}
 .price{display:flex; flex-direction:column}
 .price .pre{
   font-family:var(--sans); font-size:9.5px;
@@ -272,11 +301,12 @@ section{padding:32px 0}
   color:var(--muted); font-weight:600;
   margin-bottom:1px;
 }
-.price .amt{font-family:var(--serif); font-size:22px; color:var(--ink); line-height:1}
+.price .amt{font-family:var(--serif); font-size:22px; color:var(--ink); line-height:1; white-space:nowrap}
 .price .ship-line{
   font-family:var(--serif); font-style:italic;
   font-size:12.5px; color:var(--accent);
   margin-top:3px; letter-spacing:.01em;
+  white-space:nowrap;
 }
 
 /* buttons */
@@ -302,28 +332,33 @@ section{padding:32px 0}
 
 /* ---------- bundle ---------- */
 .bundle{
-  background:var(--paper);
-  border:1.5px solid var(--accent);
-  border-radius:16px;
-  padding:24px 22px;
+  background: color-mix(in oklab, var(--accent-pale) 60%, var(--paper));
+  border:1px solid color-mix(in oklab, var(--accent) 32%, transparent);
+  border-radius:14px;
+  padding:30px 24px 26px;
   position:relative;
-  margin-top:20px;
-  box-shadow:0 6px 22px rgba(221,90,35,.10);
+  margin-top:26px;
+  text-align:center;
+  box-shadow:0 12px 32px rgba(221,90,35,.08);
+}
+.bundle .book-cover{
+  border-color: rgba(31,25,22,.10);
+  box-shadow: 0 6px 18px rgba(31,42,51,.08);
 }
 .bundle-ribbon{
-  position:absolute; top:-11px; left:50%; transform:translateX(-50%);
+  display:inline-flex; align-items:center; gap:6px;
   background:var(--accent); color:#fff;
   font-family:var(--sans); font-size:10px;
-  letter-spacing:.22em; text-transform:uppercase;
-  padding:4px 14px; border-radius:999px;
-  font-weight:700; white-space:nowrap;
+  letter-spacing:.18em; text-transform:uppercase;
+  padding:5px 13px; border-radius:999px;
+  font-weight:700; margin:0 0 16px; white-space:nowrap;
 }
 .bundle-covers{
   display:grid; grid-template-columns:1fr 1fr; gap:10px;
   margin-bottom:18px;
 }
-.bundle-covers .book-cover{margin-bottom:0; transform:rotate(-1.2deg)}
-.bundle-covers .book-cover:last-child{transform:rotate(1.2deg)}
+.bundle-covers .book-cover{width:100%; max-width:none; margin:0; transform:none}
+.bundle-covers .book-cover:last-child{transform:none}
 .bundle h3{
   font-family:var(--serif); font-weight:500;
   font-size:20px; line-height:1.25; color:var(--ink);
@@ -340,15 +375,27 @@ section{padding:32px 0}
 }
 .bp-row{
   display:flex; align-items:baseline; justify-content:center;
-  gap:10px; flex-wrap:wrap;
-  margin-bottom:4px;
+  gap:11px; flex-wrap:wrap;
+  margin-bottom:2px;
 }
-.bp-strike{font-family:var(--sans); font-size:13px; color:var(--muted); text-decoration:line-through}
-.bp-main{font-family:var(--serif); font-size:26px; color:var(--accent); line-height:1}
+.bp-strike{font-family:var(--sans); font-size:14px; color:var(--muted); text-decoration:line-through}
+.bp-main{font-family:var(--serif); font-size:31px; color:var(--accent); line-height:1; font-weight:600}
+.bundle-perks{
+  list-style:none; display:inline-block; text-align:left;
+  margin:16px auto 20px;
+}
+.bundle-perks li{
+  display:flex; align-items:center; gap:10px;
+  font-family:var(--sans); font-size:13px; color:var(--ink-2);
+  padding:5px 0; line-height:1.4;
+}
+.bundle-perks li svg{flex-shrink:0; color:var(--accent)}
+.bundle-perks li strong{color:var(--ink); font-weight:600}
 .bp-save{
   font-family:var(--sans); font-size:10px; font-weight:600;
-  background:var(--green-pale); color:var(--green);
-  padding:3px 9px; border-radius:999px; letter-spacing:.06em;
+  letter-spacing:.06em;
+  background:transparent; color:var(--muted);
+  padding:0;
 }
 .bp-micro{
   font-family:var(--serif); font-style:italic; font-size:13px;
@@ -368,6 +415,156 @@ section{padding:32px 0}
   margin:0 0 16px;
   letter-spacing:.01em;
 }
+
+/* ---------- testimonials ---------- */
+.tm-slider{position:relative}
+.tm-track{
+  display:flex; gap:14px; align-items:stretch;
+  overflow-x:auto; scroll-snap-type:x mandatory;
+  scroll-behavior:smooth; -webkit-overflow-scrolling:touch;
+  scrollbar-width:none; margin:0 -2px; padding:2px;
+}
+.tm-track::-webkit-scrollbar{display:none}
+.tm-card{
+  flex:0 0 calc(100% - 38px);
+  scroll-snap-align:center;
+  display:flex; flex-direction:column;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:24px 22px 20px;
+}
+.tm-stars{
+  color:var(--accent); font-size:12px; letter-spacing:3px;
+  margin-bottom:13px; line-height:1;
+}
+.tm-card blockquote{
+  flex:1;
+  font-family:var(--serif);
+  font-size:16.5px; line-height:1.58; color:var(--ink);
+  margin-bottom:18px; text-wrap:pretty;
+}
+.tm-card figcaption{display:flex; align-items:center; gap:11px}
+.tm-avatar{
+  flex-shrink:0; width:34px; height:34px; border-radius:50%;
+  background:var(--accent-pale); color:var(--accent-deep);
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--serif); font-size:15px; font-weight:500;
+}
+.tm-meta{display:flex; flex-direction:column; min-width:0}
+.tm-name{font-family:var(--sans); font-size:13px; font-weight:600; color:var(--ink); line-height:1.3}
+.tm-role{font-family:var(--sans); font-size:11px; color:var(--muted); letter-spacing:.01em; line-height:1.3}
+.tm-role .gr{color:var(--accent)}
+.tm-card.t-a{background:color-mix(in oklab, var(--accent-pale) 72%, var(--bg)); border-color:color-mix(in oklab, var(--accent) 34%, transparent)}
+.tm-card.t-b{background:color-mix(in oklab, var(--blue-pale) 78%, var(--bg)); border-color:color-mix(in oklab, var(--blue) 34%, transparent)}
+.tm-card.t-c{background:color-mix(in oklab, var(--green-pale) 78%, var(--bg)); border-color:color-mix(in oklab, var(--green) 34%, transparent)}
+.tm-card.t-a .tm-avatar{background:var(--accent); color:#fff}
+.tm-card.t-b .tm-avatar{background:var(--blue); color:#fff}
+.tm-card.t-c .tm-avatar{background:var(--green); color:#fff}
+.tm-dots{display:flex; justify-content:center; gap:7px; margin-top:16px}
+.tm-dot{
+  width:7px; height:7px; border-radius:50%;
+  background:var(--line); padding:0;
+  transition:background .25s, width .25s;
+}
+.tm-dot.active{background:var(--accent); width:18px; border-radius:4px}
+.tm-foot{display:flex; align-items:center; justify-content:center; gap:12px; margin-top:15px}
+.tm-hint{
+  display:inline-flex; align-items:center; gap:6px;
+  font-family:var(--serif); font-style:italic;
+  font-size:12.5px; color:var(--muted);
+  transition:opacity .3s;
+}
+.tm-hint svg{animation:tm-swipe 1.5s ease-in-out infinite}
+.tm-foot.touched .tm-hint{opacity:0; pointer-events:none}
+@keyframes tm-swipe{0%,100%{transform:translateX(0)}50%{transform:translateX(4px)}}
+@media (prefers-reduced-motion: reduce){ .tm-hint svg{animation:none} }
+
+/* ---------- bonus / quota ---------- */
+.bonus{
+  display:flex; align-items:center; gap:17px;
+  margin-top:18px;
+  padding:16px 18px;
+  background:var(--accent-pale);
+  border:1px solid color-mix(in oklab, var(--accent) 26%, transparent);
+  border-radius:13px;
+}
+.bonus-cover{
+  flex-shrink:0; width:66px;
+  aspect-ratio:1690/2470;
+  border-radius:4px; overflow:hidden;
+  border:1px solid rgba(31,25,22,.12);
+  box-shadow:0 4px 12px rgba(31,42,51,.16);
+  background:#fff;
+}
+.bonus-cover img{width:100%; height:100%; object-fit:cover; display:block}
+.bonus-body{flex:1; min-width:0}
+.bonus-eyebrow{
+  display:inline-flex; align-items:center; gap:5px;
+  font-family:var(--sans); font-size:9.5px; font-weight:700;
+  letter-spacing:.14em; text-transform:uppercase;
+  color:var(--accent-deep);
+}
+.bonus-title{
+  font-family:var(--serif); font-size:16.5px; line-height:1.25;
+  color:var(--ink); margin:4px 0 10px;
+}
+.bonus-title em{font-style:italic; color:var(--accent)}
+.bonus-quota{display:flex; align-items:center; gap:9px}
+.bonus-bar{
+  flex:1; height:5px; border-radius:3px;
+  background:color-mix(in oklab, var(--accent) 18%, transparent);
+  overflow:hidden;
+}
+.bonus-bar span{
+  display:block; height:100%; border-radius:3px;
+  background:var(--accent);
+}
+.bonus-quota-label{
+  flex-shrink:0;
+  font-family:var(--sans); font-size:11px; color:var(--accent-deep);
+  font-weight:600; white-space:nowrap;
+}
+.bonus-live{
+  display:inline-block; width:6px; height:6px; border-radius:50%;
+  background:var(--accent); margin-right:1px;
+  animation:bonus-pulse 1.6s ease-in-out infinite;
+}
+@keyframes bonus-pulse{0%,100%{opacity:1}50%{opacity:.3}}
+@media (prefers-reduced-motion: reduce){ .bonus-live{animation:none} }
+
+/* ---------- book quotes (minimal) ---------- */
+.q-slider{margin-top:6px}
+.q-track{
+  display:flex; align-items:stretch;
+  overflow-x:auto; scroll-snap-type:x mandatory;
+  scroll-behavior:smooth; -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+.q-track::-webkit-scrollbar{display:none}
+.q-slide{
+  flex:0 0 100%;
+  scroll-snap-align:center;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align:center;
+  padding:8px 10px;
+}
+.q-mark{
+  font-family:var(--serif); font-size:52px; line-height:.5;
+  color:var(--line); margin-bottom:16px; height:24px;
+}
+.q-slide blockquote{
+  font-family:var(--serif); font-style:italic; font-weight:400;
+  font-size:18px; line-height:1.72; color:var(--ink-2);
+  text-wrap:pretty; max-width:33ch;
+}
+.q-dots{display:flex; justify-content:center; gap:7px; margin-top:24px}
+.q-dot{
+  width:6px; height:6px; border-radius:50%;
+  background:var(--line); padding:0;
+  transition:background .25s, width .25s;
+}
+.q-dot.active{background:var(--ink-2); width:16px; border-radius:3px}
 
 /* ---------- timeline ---------- */
 .t-list{
@@ -453,7 +650,7 @@ section{padding:32px 0}
   background:var(--bg); color:var(--ink);
   outline:none; transition:border-color .15s, background .15s;
 }
-.t-input:focus{border-color:var(--accent); background:var(--paper)}
+.t-input:focus{border-color:var(--accent); background:var(--bg)}
 .t-input::placeholder{color:var(--muted)}
 .t-hint{
   font-family:var(--serif); font-style:italic;
@@ -649,7 +846,7 @@ section{padding:32px 0}
 .order-form textarea::placeholder{color:var(--muted)}
 .order-form input:focus,
 .order-form textarea:focus,
-.order-form select:focus{border-color:var(--accent); background-color:var(--paper)}
+.order-form select:focus{border-color:var(--accent); background-color:var(--bg)}
 .order-form .of-loading{
   font-family:var(--serif); font-style:italic;
   font-size:12px; color:var(--muted);
@@ -712,12 +909,14 @@ section{padding:32px 0}
 }
 .qa-icon{
   flex-shrink:0;
-  width:38px; height:38px;
-  border-radius:10px;
+  width:42px; height:42px;
+  border-radius:11px;
   background:var(--accent-pale);
+  border:none;
   color:var(--accent);
   display:flex; align-items:center; justify-content:center;
 }
+.qa-icon.wa{background:var(--green-pale); color:var(--green)}
 .qa-body{display:flex; flex-direction:column; gap:1px; flex:1; min-width:0}
 .qa-title{
   font-family:var(--serif); font-weight:500;
@@ -732,6 +931,17 @@ section{padding:32px 0}
   display:flex; align-items:center;
 }
 
+/* ---------- QRIS pill (under gratis ongkir) ---------- */
+.po-pill.qris{animation-delay:.9s}
+.qr-ic{
+  flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  width:18px; height:18px; color:var(--accent);
+}
+.qr-ic svg{display:block; animation:qr-pulse 2.4s ease-in-out infinite}
+@keyframes qr-pulse{0%,100%{transform:scale(1); opacity:.9}50%{transform:scale(1.08); opacity:1}}
+@media (prefers-reduced-motion: reduce){ .qr-ic svg{animation:none} }
+
 /* tracking inside modal */
 .tr-modal{padding:0}
 .tr-modal .t-input-row{display:flex; gap:8px; margin-bottom:6px}
@@ -743,7 +953,7 @@ section{padding:32px 0}
   background:var(--bg); color:var(--ink);
   outline:none; transition:border-color .15s, background .15s;
 }
-.tr-modal .t-input:focus{border-color:var(--accent); background:var(--paper)}
+.tr-modal .t-input:focus{border-color:var(--accent); background:var(--bg)}
 .tr-modal .t-input::placeholder{color:var(--muted)}
 .tr-modal .t-hint{
   font-family:var(--serif); font-style:italic;
@@ -780,17 +990,25 @@ section{padding:32px 0}
 .tr-modal .t-row .body .time{font-family:var(--sans); font-size:11.5px; color:var(--muted); margin-top:1px}
 
 /* timeline modal list */
-.tl-list{padding:0 0 6px}
-.tl-list .t-step{display:flex; gap:14px; padding-bottom:18px; position:relative}
+.tl-list{padding:4px 0 6px}
+.tl-list .t-step{display:flex; gap:16px; padding-bottom:22px; position:relative}
 .tl-list .t-step:last-child{padding-bottom:0}
-.tl-list .t-left{display:flex; flex-direction:column; align-items:center; flex-shrink:0; padding-top:3px}
-.tl-list .t-dot{width:10px; height:10px; border-radius:50%; background:var(--line); flex-shrink:0}
-.tl-list .t-dot.active{background:var(--accent); box-shadow:0 0 0 4px var(--accent-pale)}
-.tl-list .t-line{width:1px; flex:1; background:var(--line); margin-top:4px}
+.tl-list .t-left{display:flex; flex-direction:column; align-items:center; flex-shrink:0}
+.tl-list .t-dot{
+  width:40px; height:40px; border-radius:50%;
+  background:var(--paper); border:1px solid var(--line);
+  color:var(--muted);
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0; z-index:1;
+}
+.tl-list .t-dot.active{background:var(--accent); border-color:var(--accent); color:#fff; box-shadow:0 6px 16px rgba(221,90,35,.22)}
+.tl-list .t-line{width:2px; flex:1; background:var(--line); margin:5px 0; border-radius:2px}
 .tl-list .t-step:last-child .t-line{display:none}
-.tl-list .t-body h4{font-family:var(--serif); font-weight:500; font-size:16px; color:var(--ink); margin-bottom:2px}
+.tl-list .t-body{padding-top:7px}
+.tl-list .t-body h4{font-family:var(--serif); font-weight:500; font-size:17px; color:var(--ink); margin-bottom:3px; display:flex; align-items:center; gap:9px; flex-wrap:wrap}
 .tl-list .t-step:not(.active) .t-body h4{color:var(--ink-2)}
-.tl-list .t-body .date{font-family:var(--sans); font-size:11.5px; font-weight:600; letter-spacing:.04em; color:var(--accent); margin-bottom:4px}
+.tl-list .t-now{font-family:var(--sans); font-size:9px; font-weight:700; letter-spacing:.13em; text-transform:uppercase; background:var(--accent); color:#fff; padding:3px 9px; border-radius:999px}
+.tl-list .t-body .date{font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:.03em; color:var(--accent); margin-bottom:5px}
 .tl-list .t-step:not(.active) .t-body .date{color:var(--muted)}
 .tl-list .t-body p{font-family:var(--sans); font-size:12.5px; color:var(--muted); line-height:1.6}
 
@@ -866,25 +1084,39 @@ footer.bottom .copyright{
 </head>
 <body>
 
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <rect width="100" height="100" rx="18" fill="#dd5a23"/>
+    <text x="50" y="68" font-family="Georgia, serif" font-style="italic" font-size="54" font-weight="500" text-anchor="middle" fill="#fffaf0">n</text>
+  </svg>
+</template>
+
 <!-- TOPBAR -->
 <nav class="topbar">
   <div class="row">
-    <a href="#top" class="brand">nurunala <span class="x">&amp;</span> nuarista</a>
+    <a href="#top" class="brand" style="font-family: &quot;Crimson Pro&quot;">Pre-Order Buku Nurunala</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <header class="hero wrap" id="top">
-  <h1 style="font-size: 35px">Setiap pernikahan punya cerita. Dan inilah <span style="color: rgb(221, 90, 35)">kisah kami,</span> apa adanya.</h1>
-  <p class="lede">Senang dan sedihnya. Lega dan lelahnya. Peluk dan tengkarnya. Semoga bermakna.</p>
+  <h1>Apakah pernikahan menakutkan? Atau menyenangkan? Yang pasti, <em>setiap pernikahan punya cerita.</em></h1>
+  <p class="lede">Dan inilah kisah kami, apa adanya. Senang dan sedihnya. Jatuh dan bangunnya. Hangat dan dinginnya. Selamat membaca.</p>
   <div class="divider-orn"><span class="star">✦</span></div>
 </header>
 
 <!-- PREORDER PILL -->
 <div class="po-strip">
   <span class="po-pill">
-    <span class="pulse"></span>
-    <span><em>Masa pre-order dibuka</em> · Gratis ongkir seluruh Indonesia</span>
+    <span class="po-truck">
+      <span class="po-dash"></span><span class="po-dash"></span><span class="po-dash"></span>
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M14 9h4l4 4v4a1 1 0 0 1-1 1h-1"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M9 18h6"/></svg>
+    </span>
+    <span><strong>Gratis ongkir</strong> ke seluruh Indonesia</span>
+  </span>
+  <span class="po-pill qris">
+    <span class="qr-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3"/><path d="M21 14v.01"/><path d="M14 21h3"/><path d="M21 17.5V21"/></svg></span>
+    <span>Bayar Mudah Pakai <strong>QRIS</strong></span>
   </span>
 </div>
 
@@ -897,9 +1129,9 @@ footer.bottom .copyright{
   </div>
 
   <!-- BUKU 1: yang baru / preorder -->
-  <article class="book">
+  <article class="book cool">
     <div class="book-cover">
-      <img src="covers/ternyata-kita-belum-siap-nikah.png" alt="Ternyata Kita Belum Siap Nikah" />
+      <img src="covers/ternyata-kita-belum-siap-nikah-web.jpg" alt="Ternyata Kita Belum Siap Nikah" />
     </div>
     <div class="book-tags">
       <span class="tag">TERBIT 2026</span>
@@ -907,7 +1139,7 @@ footer.bottom .copyright{
     </div>
     <h3>Ternyata Kita Belum Siap Nikah</h3>
     <p class="meta">Memoar 10 Tahun Pernikahan</p>
-    <p class="desc">Setelah sepuluh tahun, apa yang berubah? Azhar &amp; Vidia menceritakan 10 pelajaran paling berharga dari 10 tahun berumah tangga. Apa adanya.</p>
+    <p class="desc">Setelah sepuluh tahun, apa yang berubah? Azhar &amp; Vidia menceritakan 10 pelajaran paling berharga dari 10 tahun berumah tangga. Tentang beratnya mendidik anak, kegiatan 'mengobrol' yang menjadi fondasi hubungan, ruang sendiri yang perlu diupayakan, berbagi tugas agar tetap waras, dan belajar bertengkar dengan benar.</p>
     <div class="footer">
       <div class="price">
         <span class="pre">Pre-order</span>
@@ -922,9 +1154,9 @@ footer.bottom .copyright{
   </article>
 
   <!-- BUKU 2: yang lama -->
-  <article class="book">
+  <article class="book warm">
     <div class="book-cover">
-      <img src="covers/belajar-mencintai.png" alt="Belajar Mencintai" />
+      <img src="covers/belajar-mencintai-web.jpg" alt="Belajar Mencintai" />
     </div>
     <div class="book-tags">
       <span class="tag blue">TERBIT 2019</span>
@@ -932,7 +1164,7 @@ footer.bottom .copyright{
     </div>
     <h3>Belajar Mencintai</h3>
     <p class="meta">Memoar Tahun-Tahun Pertama Pernikahan</p>
-    <p class="desc">Azhar menikah di usia 20 tahun. Saat itu masih mahasiswa ilmu gizi yang bermimpi jadi penulis. Vidia seniornya di kampus, tiga tahun lebih tua.</p>
+    <p class="desc">Azhar menikah di usia 20 tahun. Saat itu masih mahasiswa ilmu gizi yang bermimpi jadi penulis. Vidia seniornya di kampus, tiga tahun lebih tua. Ini cerita jatuh bangun mereka di tahun-tahun pertama pernikahan. Lelahnya pindah-pindah rumah, beratnya kehilangan ayah, keterampilan mencintai (keadaan ekonomi) yang masih payah. </p>
     <div class="footer">
       <div class="price">
         <span class="pre">Harga</span>
@@ -947,11 +1179,11 @@ footer.bottom .copyright{
   </article>
 
   <!-- BUNDLE -->
-  <div class="bundle" style="padding: 30px 20px 24px">
-    <span class="bundle-ribbon">★ PILIHAN TERBAIK ★</span>
+  <div class="bundle">
+    <span class="bundle-ribbon">Paket Hemat · Pilihan Terbaik</span>
     <div class="bundle-covers">
-      <div class="book-cover"><img src="covers/belajar-mencintai.png" alt="Belajar Mencintai" /></div>
-      <div class="book-cover"><img src="covers/ternyata-kita-belum-siap-nikah.png" alt="Ternyata Kita Belum Siap Nikah" /></div>
+      <div class="book-cover"><img src="covers/belajar-mencintai-web.jpg" alt="Belajar Mencintai" /></div>
+      <div class="book-cover"><img src="covers/ternyata-kita-belum-siap-nikah-web.jpg" alt="Ternyata Kita Belum Siap Nikah" /></div>
     </div>
     <h3>Koleksi keduanya, lengkapi ceritamu.</h3>
     <p class="desc">Cerita di awal-awal pernikahan, hingga gejolak yang dihadapi menuju sepuluh tahun pernikahan.</p>
@@ -959,15 +1191,84 @@ footer.bottom .copyright{
       <span class="bp-strike">Rp 176.000</span>
       <span class="bp-main">Rp 158.000</span>
     </div>
-    <div class="bp-foot">
-      <span class="bp-save">Hemat Rp 18.000</span>
-      <span class="bp-micro">Lumayan buat beli kopi susu. ☕</span>
+    <ul class="bundle-perks">
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Dapat <strong>dua memoar</strong> sekaligus</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Hemat Rp 18.000</strong> dari harga satuan</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Gratis ongkir</strong> ke seluruh Indonesia</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Bayar mudah</strong> pakai QRIS</span></li>
+    </ul>
+    <a class="btn btn-primary btn-block" href="https://nurunala.myr.id/pl/paket-bundel-memoar" target="_blank" rel="noopener" onclick="event.preventDefault(); openPay(this.href)">Pesan Paket Bundel</a>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <div class="s-head" style="margin-top:46px; margin-bottom:18px">
+    <p class="eyebrow" style="margin-bottom:9px">Kata Pembaca</p>
+    <h2>Sudah dibaca, sudah <em>dirasakan.</em></h2>
+  </div>
+  <div class="tm-slider">
+    <div class="tm-track" id="tmTrack">
+    <figure class="tm-card t-a">
+      <div class="tm-stars" aria-label="Bintang 5 di Goodreads">★★★★★</div>
+      <blockquote>"Buku yang menyentuh. Mengalir, natural, serta Azhar banget lah. Favoritku justru bagian Vidia, sudut pandang perempuan sekali. Love."</blockquote>
+      <figcaption>
+        <span class="tm-avatar">A</span>
+        <span class="tm-meta">
+          <span class="tm-name">Azma Zakiyah</span>
+          <span class="tm-role">Pembaca <em>Belajar Mencintai</em> · <span class="gr">Goodreads</span></span>
+        </span>
+      </figcaption>
+    </figure>
+    <figure class="tm-card t-b">
+      <blockquote>"Bergizi tinggi dan melebihi ekspektasi. Buat yang mau bertumbuh dan siap menjalani pekerjaan mencintai, buku ini sangat layak dijadikan teman perjalanan."</blockquote>
+      <figcaption>
+        <span class="tm-avatar">C</span>
+        <span class="tm-meta">
+          <span class="tm-name">Chairul Nisaa</span>
+          <span class="tm-role">Pembaca <em>Belajar Mencintai</em></span>
+        </span>
+      </figcaption>
+    </figure>
+    <figure class="tm-card t-c">
+      <blockquote>"Buku ini cocok untukmu yang sedang mempersiapkan diri, untukmu yang pernah terluka, dan kamu yang sedang membina rumah tangga."</blockquote>
+      <figcaption>
+        <span class="tm-avatar">N</span>
+        <span class="tm-meta">
+          <span class="tm-name">Nanda Destiyani</span>
+          <span class="tm-role">Pembaca <em>Belajar Mencintai</em></span>
+        </span>
+      </figcaption>
+    </figure>
     </div>
-    <p class="bundle-ship">+ gratis ongkir seluruh Indonesia, selama pre-order</p>
-        <a class="btn btn-primary btn-block" href="https://nurunala.myr.id/pl/paket-bundel-memoar" target="_blank" rel="noopener" onclick="event.preventDefault(); openPay(this.href)">Pesan Paket Bundel</a>
+    <div class="tm-foot" id="tmFoot">
+      <div class="tm-dots" id="tmDots">
+        <button class="tm-dot active" type="button" aria-label="Testimoni 1"></button>
+        <button class="tm-dot" type="button" aria-label="Testimoni 2"></button>
+        <button class="tm-dot" type="button" aria-label="Testimoni 3"></button>
+      </div>
+      <span class="tm-hint">Geser
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+      </span>
+    </div>
+  </div>
+
+  <!-- BONUS -->
+  <div class="bonus">
+    <div class="bonus-cover"><img src="covers/ebook-menulis-memoar-web.jpg" alt="Ebook Menulis Memoar" /></div>
+    <div class="bonus-body">
+      <span class="bonus-eyebrow">★ Bonus 200 Pemesan Pertama</span>
+      <p class="bonus-title">Gratis ebook <em>Menulis Memoar</em></p>
+      <div class="bonus-quota">
+        <div class="bonus-bar"><span style="width:68%"></span></div>
+        <span class="bonus-quota-label"><span class="bonus-live"></span>Kuota masih tersedia</span>
+      </div>
+    </div>
   </div>
 
   <!-- QUICK ACTIONS -->
+  <div class="s-head" style="margin-top:42px; margin-bottom:16px">
+    <p class="eyebrow" style="margin-bottom:9px">Sudah pesan?</p>
+    <h2 style="font-size:21px">Pantau pesananmu.</h2>
+  </div>
   <div class="qa-grid">
     <button class="qa-card" onclick="openTimeline()">
       <span class="qa-icon">
@@ -975,14 +1276,14 @@ footer.bottom .copyright{
       </span>
       <span class="qa-body">
         <span class="qa-title">Timeline Pre-order</span>
-        <span class="qa-sub">Dari pemesanan sampai sampai</span>
+        <span class="qa-sub">Dari pemesanan hingga tiba</span>
       </span>
       <span class="qa-chev">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
       </span>
     </button>
     <a class="qa-card" href="https://wa.me/6281211006417?text=Halo,%20saya%20mau%20cek%20status%20pesanan%20buku%20saya.%20Atas%20nama%3A" target="_blank" rel="noopener">
-      <span class="qa-icon">
+      <span class="qa-icon wa">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.05 2zm0 18.15h-.01a8.23 8.23 0 01-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.264 8.264 0 01-1.26-4.37c0-4.54 3.71-8.24 8.26-8.24 2.2 0 4.27.86 5.83 2.42a8.183 8.183 0 012.42 5.84c0 4.54-3.7 8.21-8.25 8.21zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.81-.78.97-.14.17-.29.19-.54.06a6.74 6.74 0 01-1.98-1.22 7.39 7.39 0 01-1.37-1.7c-.14-.24-.02-.37.11-.5.11-.11.24-.29.37-.43.12-.14.16-.24.24-.4.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42-.14-.01-.31-.01-.48-.01-.17 0-.43.06-.66.31-.23.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.55.13.17 1.73 2.65 4.19 3.71.58.25 1.04.4 1.4.51.59.19 1.13.16 1.55.1.47-.07 1.45-.59 1.66-1.16.21-.57.21-1.06.14-1.16-.06-.11-.22-.18-.47-.31z"/></svg>
       </span>
       <span class="qa-body">
@@ -993,6 +1294,38 @@ footer.bottom .copyright{
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
       </span>
     </a>
+  </div>
+
+  <!-- BOOK QUOTES -->
+  <div class="s-head" style="margin-top:48px; margin-bottom:20px">
+    <p class="eyebrow" style="margin-bottom:9px">Dari Halaman Buku</p>
+    <h2 style="font-size:22px">Sepenggal <em>kalimat.</em></h2>
+  </div>
+  <div class="q-slider">
+    <div class="q-track" id="qTrack">
+      <figure class="q-slide">
+        <div class="q-mark">&ldquo;</div>
+        <blockquote>Tantangan ekonomi di awal pernikahan memang cukup berat. Tapi justru saat itulah, di tengah tekanan dan keterbatasan, kami mengeluarkan sifat asli masing-masing. Sehingga bisa saling mengenal lebih dalam, dan lebih jujur.</blockquote>
+      </figure>
+      <figure class="q-slide">
+        <div class="q-mark">&ldquo;</div>
+        <blockquote>Aku selalu percaya pendakian berdua lebih membanggakan daripada perjumpaan di puncak dengan bendera kemenangan masing-masing.</blockquote>
+      </figure>
+      <figure class="q-slide">
+        <div class="q-mark">&ldquo;</div>
+        <blockquote>Kalau sejak awal tak punya visi yang sama, perbedaan setipis apa pun bisa memicu pertengkaran. Dan kesalahan sekecil apa pun bisa mengobarkan api amarah yang pada akhirnya saling membakar. Lalu bubar.</blockquote>
+      </figure>
+      <figure class="q-slide">
+        <div class="q-mark">&ldquo;</div>
+        <blockquote>Pasti ada seseorang di sana. Yang tersipu saat kamu memujinya. Dan hatimu bergetar kala menatapnya. Ia yang tak rela membiarkan sebelah tanganmu menepuk-nepuk udara. Ia menyambut sebelah tanganmu dengan tepukan, lalu terdengarlah suara cinta.</blockquote>
+      </figure>
+    </div>
+    <div class="q-dots" id="qDots">
+      <button class="q-dot active" type="button" aria-label="Kutipan 1"></button>
+      <button class="q-dot" type="button" aria-label="Kutipan 2"></button>
+      <button class="q-dot" type="button" aria-label="Kutipan 3"></button>
+      <button class="q-dot" type="button" aria-label="Kutipan 4"></button>
+    </div>
   </div>
 </section>
 
@@ -1099,15 +1432,15 @@ footer.bottom .copyright{
     <p class="modal-sec" style="margin-top:8px">Timeline Pre-order</p>
     <div class="tl-list">
       <div class="t-step active">
-        <div class="t-left"><div class="t-dot active"></div><div class="t-line"></div></div>
+        <div class="t-left"><div class="t-dot active"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div><div class="t-line"></div></div>
         <div class="t-body">
-          <h4>Masa Pemesanan</h4>
+          <h4>Masa Pemesanan <span class="t-now">Sedang berlangsung</span></h4>
           <p class="date">25 Mei – 5 Juni 2026</p>
           <p>Pre-order dibuka. Pesan sebelum tutup.</p>
         </div>
       </div>
       <div class="t-step">
-        <div class="t-left"><div class="t-dot"></div><div class="t-line"></div></div>
+        <div class="t-left"><div class="t-dot"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg></div><div class="t-line"></div></div>
         <div class="t-body">
           <h4>Percetakan</h4>
           <p class="date">6 – 20 Juni 2026</p>
@@ -1115,7 +1448,7 @@ footer.bottom .copyright{
         </div>
       </div>
       <div class="t-step">
-        <div class="t-left"><div class="t-dot"></div></div>
+        <div class="t-left"><div class="t-dot"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M14 9h4l4 4v4a1 1 0 0 1-1 1h-1"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M9 18h6"/></svg></div></div>
         <div class="t-body">
           <h4>Pengemasan &amp; Pengiriman</h4>
           <p class="date">21 – 25 Juni 2026</p>
@@ -1156,7 +1489,7 @@ const sinopsis = {
   buku1: {
     badge: "Buku Pertama · 5 Tahun Pertama",
     title: "Belajar Mencintai",
-    tagline: "Azhar menikah di usia 20 tahun. Saat itu masih mahasiswa, bermimpi menjadi penulis. Vidia seniornya di kampus, tiga tahun lebih tua. Keduanya memutuskan hidup bersama dan belajar bahwa ketika menikah, kita harus bertransformasi dari orang yang jatuh cinta menjadi orang yang mencintai.\n\nKabar baiknya, mencintai adalah keterampilan. Dan semua keterampilan bisa dipelajari.",
+    tagline: "Azhar menikah di usia 20 tahun. Saat itu masih mahasiswa ilmu gizi yang bermimpi jadi penulis. Vidia seniornya di kampus, tiga tahun lebih tua. Ini cerita jatuh bangun mereka di tahun-tahun pertama pernikahan. Lelahnya pindah-pindah rumah, beratnya kehilangan ayah, kemampuan mencintai (dan ekonomi) yang masih payah. Kabar baiknya, mencintai adalah keterampilan. Dan semua keterampilan bisa dipelajari.",
     wa: "https://wa.me/6281211006417?text=Hai,%20saya%20mau%20pesan%20karya%20Azhar%20Nurunala%20yang%20berjudul%20*Belajar%20Mencintai*.%0A%0ANama%3A%0ANo%20WA%3A%0AAlamat%3A",
     payUrl: "https://nurunala.myr.id/pl/belajar-mencintai",
     chapters: [
@@ -1170,29 +1503,29 @@ const sinopsis = {
       { num: "Bab 7", title: "Mencari Titik Temu" },
       { num: "Bab 8", title: "Mencintai Diri Sendiri" },
       { num: "Bab 9", title: "Jatuh Cinta Setiap Hari" },
-      { num: "Bab 10", title: "Pernikahan & Sepaket Kejutan — oleh Vidia" },
+      { num: "Bab 10", title: "Pernikahan & Sepaket Kejutan" },
       { num: "Epilog", title: "Belajar Mencintai" }
     ]
   },
   buku2: {
     badge: "Buku Kedua · 10 Tahun Kemudian",
     title: "Ternyata Kita Belum Siap Nikah",
-    tagline: "Setelah sepuluh tahun, apa yang berubah? Azhar & Vidia menceritakan 10 pelajaran paling berharga dari 10 tahun berumah tangga. Apa adanya.",
+    tagline: "Setelah sepuluh tahun, apa yang berubah? Azhar & Vidia menceritakan 10 pelajaran paling berharga dari 10 tahun berumah tangga. Tentang beratnya mendidik anak, kegiatan 'mengobrol' yang menjadi fondasi hubungan, ruang sendiri yang perlu diupayakan, berbagi tugas agar tetap waras, dan belajar bertengkar dengan benar.",
     wa: "https://wa.me/6281212340604?text=Halo,%20saya%20mau%20pesan%20*Ternyata%20Kita%20Belum%20Siap%20Nikah*%201%20eks%20%F0%9F%99%8F",
     payUrl: "https://nurunala.myr.id/pl/ternyata-kita-belum-siap-nikah/",
     chapters: [
       { num: "Prolog", title: "Sepuluh Tahun Kemudian" },
       { num: "Bab 1", title: "Saling Mengenal Penting, Saling Menerima Jauh Lebih Penting" },
-      { num: "Bab 2", title: "Berdamai dengan 'Cukup' Sebelum Mata Hati Tertutup" },
+      { num: "Bab 2", title: "Bertengkar dengan Benar" },
       { num: "Bab 3", title: "Sayangi Rutinitas, Rindukan Spontanitas" },
       { num: "Bab 4", title: "Semua Butuh Ruang Sendiri" },
       { num: "Bab 5", title: "Berbagi Tugas Agar Tetap Waras" },
       { num: "Bab 6", title: "Ego Bikin Bego, So Let It Go" },
-      { num: "Bab 7", title: "Tak Ada Keresahan yang Tak Layak Dibicarakan" },
-      { num: "Bab 8", title: "Rayakan Apa Saja Setiap Hari" },
+      { num: "Bab 7", title: "Tak Ada Keresahan yang Tak Layak Dibicarakan\n" },
+      { num: "Bab 8", title: "Ternyata, Ketidakromantisan adalah Berkah" },
       { num: "Bab 9", title: "Berhenti Memuja Uang, Masa Kecil Anak Tak Bisa Diulang" },
       { num: "Bab 10", title: "Rumah Tangga adalah Bahtera, Bukan Penjara" },
-      { num: "Epilog", title: "Hujan Pasti Reda" }
+      { num: "Epilog", title: "Ternyata Kita Belum Siap Nikah" }
     ]
   }
 };
@@ -1496,10 +1829,102 @@ window.addEventListener('message', e => {
   if (d.type === '__deactivate_edit_mode') closeTweaks();
 });
 try { window.parent.postMessage({ type: '__edit_mode_available' }, '*'); } catch(e){}
+
+/* ---------- testimonial slider ---------- */
+(function(){
+  var track = document.getElementById('tmTrack');
+  var dotsWrap = document.getElementById('tmDots');
+  if (!track || !dotsWrap) return;
+  var dots = Array.prototype.slice.call(dotsWrap.children);
+  var foot = document.getElementById('tmFoot');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var current = 0, timer = null, userTouched = false;
+
+  function markTouched(){ userTouched = true; if (foot) foot.classList.add('touched'); }
+
+  function slideW(){ var c = track.children[0]; return c ? c.offsetWidth + 14 : track.offsetWidth; }
+  function setActive(i){
+    current = i;
+    dots.forEach(function(d, idx){ d.classList.toggle('active', idx === i); });
+  }
+  function goTo(i, smooth){
+    track.scrollTo({ left: i * slideW(), behavior: smooth === false ? 'auto' : 'smooth' });
+    setActive(i);
+  }
+  // sync dots while scrolling/swiping
+  var raf = null;
+  track.addEventListener('scroll', function(){
+    if (raf) return;
+    raf = requestAnimationFrame(function(){
+      raf = null;
+      var i = Math.round(track.scrollLeft / slideW());
+      if (i !== current) setActive(i);
+    });
+  });
+  // dot click
+  dots.forEach(function(d, i){
+    d.addEventListener('click', function(){ markTouched(); stopAuto(); goTo(i); });
+  });
+  track.addEventListener('pointerdown', function(){ markTouched(); stopAuto(); });
+
+  function startAuto(){
+    if (reduce || userTouched) return;
+    stopAuto();
+    timer = setInterval(function(){
+      var next = (current + 1) % dots.length;
+      goTo(next);
+    }, 5000);
+  }
+  function stopAuto(){ if (timer){ clearInterval(timer); timer = null; } }
+
+  // only autoplay while section is on screen
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ e.isIntersecting ? startAuto() : stopAuto(); });
+    }, { threshold: 0.4 });
+    io.observe(track);
+  } else {
+    startAuto();
+  }
+  window.addEventListener('resize', function(){ goTo(current, false); });
+})();
+
+/* ---------- book quotes slider (minimal) ---------- */
+(function(){
+  var track = document.getElementById('qTrack');
+  var dotsWrap = document.getElementById('qDots');
+  if (!track || !dotsWrap) return;
+  var dots = Array.prototype.slice.call(dotsWrap.children);
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var cur = 0, timer = null, touched = false;
+  function w(){ return track.children[0] ? track.children[0].offsetWidth : track.offsetWidth; }
+  function setA(i){ cur = i; dots.forEach(function(d, x){ d.classList.toggle('active', x === i); }); }
+  function go(i, smooth){ track.scrollTo({ left: i * w(), behavior: smooth === false ? 'auto' : 'smooth' }); setA(i); }
+  var raf = null;
+  track.addEventListener('scroll', function(){
+    if (raf) return;
+    raf = requestAnimationFrame(function(){
+      raf = null;
+      var i = Math.round(track.scrollLeft / w());
+      if (i !== cur) setA(i);
+    });
+  });
+  dots.forEach(function(d, i){ d.addEventListener('click', function(){ touched = true; stop(); go(i); }); });
+  track.addEventListener('pointerdown', function(){ touched = true; stop(); });
+  function start(){ if (reduce || touched) return; stop(); timer = setInterval(function(){ go((cur + 1) % dots.length); }, 6500); }
+  function stop(){ if (timer){ clearInterval(timer); timer = null; } }
+  if ('IntersectionObserver' in window){
+    new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ e.isIntersecting ? start() : stop(); });
+    }, { threshold: 0.4 }).observe(track);
+  } else { start(); }
+  window.addEventListener('resize', function(){ go(cur, false); });
+})();
 </script>
 </body>
 </html>
 
 <style id="__om-edit-overrides">
-#top >:is(h1,h2) >:is(h1,h2,h3,h4,h5,h6,p,li,dt,dd,blockquote,figcaption,label,span,a,em,strong,small,td,th,caption) { color: rgb(0, 0, 0) !important }
+#top >:is(h1,h2) >:is(h1,h2,h3,h4,h5,h6,p,li,dt,dd,blockquote,figcaption,label,span,a,strong,small,td,th,caption) { color: rgb(0, 0, 0) !important }
+#top >:is(h1,h2) > em { color: var(--accent) !important }
 </style>
